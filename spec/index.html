@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Master Spec — Republic Lead Gen</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%2310141d'/%3E%3Ctext x='32' y='45' font-family='Arial' font-weight='900' font-size='36' fill='%238b6cd6' text-anchor='middle'%3ER%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body data-page="spec">
+
+<header class="topbar">
+  <div class="topbar-in">
+    <a class="wordmark" href="../"><b><span>REPUBLIC</span></b><small>Command Center</small></a>
+    <nav class="topnav" aria-label="Dashboards">
+      <a href="../">Hub</a>
+      <a href="./" aria-current="page">Master Spec</a>
+      <a href="../research/">Lead Tiers</a>
+      <a href="../plan/">Go-Live Plan</a>
+    </nav>
+    <div class="pageprog js-pageprog"><span>My progress</span><div class="bar"><i></i></div><span class="pct">0/0</span></div>
+  </div>
+</header>
+
+<div class="hero">
+  <div class="wrap">
+    <div class="crumb">Master Spec &amp; Question Bank · v2 · both 15 Jul calls merged</div>
+    <h1>Republic Lead Gen Offer — Master Spec</h1>
+    <p class="lede">A ~$20k done-with-you offer: the client becomes CEO of their own pay-per-lead business, powered by LeadHunter and a stack AI can mostly run. This page is the single source of truth — nothing here is a mistake we can afford to make twice.</p>
+    <div class="meta-chips">
+      <span class="chip"><span class="dot mut"></span>Owner: Taylor Cunningham</span>
+      <span class="chip acc"><span class="dot acc"></span>Ryan &amp; Cole sell within ~a week</span>
+      <span class="chip warn"><span class="dot warn"></span>Fulfilment must survive 18-deals-in-a-week</span>
+      <button class="fbtn js-reset" type="button" style="margin-left:auto">Reset my progress</button>
+    </div>
+  </div>
+</div>
+
+<nav class="subnav" aria-label="Sections">
+  <div class="subnav-in">
+    <a href="#context">Context</a><a href="#team">Team</a><a href="#model">The model</a><a href="#workstreams">Workstreams</a><a href="#questions">Question bank</a><a href="#decisions">Decisions</a><a href="#inputs">Inputs</a><a href="#actions">Action items</a><a href="#sequence">Sequence</a><a href="#source">Source</a>
+  </div>
+</nav>
+
+<main class="wrap">
+
+<section id="context">
+  <div class="sec-head"><span class="k">§1</span><h2>What changed, and why the urgency</h2></div>
+  <div class="grid g2">
+    <div class="card">
+      <h3>The pivot</h3>
+      <p class="note">Centre of gravity moves <b>from the full AI-agency offer to the Republic lead gen offer</b>. The agency offer is still sold, but internally only (higher margin → pricing drops, ~$15k held as a discount lever). Republic is ~90% done-for-you; sales reps can upsell buyers into the full consultancy. Emphasis goes wherever <b>AI can carry fulfilment</b> — that's Republic.</p>
+      <p class="note" style="margin-top:10px">Contract model: clients license the system, own their version after the contract ends, and pay a <b>SaaS fee</b> to keep it updated — recurring revenue tail.</p>
+    </div>
+    <div class="card">
+      <h3>The cautionary tale</h3>
+      <p class="note">In March the outside team sold <b>18 deals in one week</b> at a $50k price point — fulfilment was buried for two months. Republic launches at a lower price with a hungrier team. The whole spec exists so that spike never lands on one person again: <b>Taylor must never be the bottleneck.</b></p>
+      <p class="note" style="margin-top:10px">Go-live: sales believed to start ~Mon 20 Jul. Jerome: <i>"seems a little early."</i> The go/no-go gates in the <a href="../plan/">Go-Live Plan</a> decide the real date.</p>
+    </div>
+  </div>
+
+  <h3 style="margin-top:24px">The three-tier lead structure</h3>
+  <div class="grid" style="margin-top:4px">
+    <div class="tier t3">
+      <h3><span class="chip copper"><span class="dot copper"></span>TIER 3</span> Ultra-high intent — the Meta siphon <span class="price" style="color:var(--copper-ink)">Top price</span></h3>
+      <p>Our own paid Meta ads. Lead takes a specific high-value action (books a call happening within 2–3 days) → tagged as top-class resale inventory. Intent proven by action.</p>
+    </div>
+    <div class="tier t2">
+      <h3><span class="chip acc"><span class="dot acc"></span>TIER 2</span> High intent — LeadHunter <span class="price" style="color:var(--accent-ink)">Core product</span></h3>
+      <p>Prospects who <b>declared an urgent need in their own words</b> within the last 7 days. Not opted in, out-of-market, 0–100 scored, three internal sub-tiers to map. The ~91% match claim needs substantiation before sales quote it.</p>
+    </div>
+    <div class="tier t1">
+      <h3><span class="chip blue"><span class="dot blue"></span>TIER 1</span> Low intent — Data Moon <span class="price" style="color:var(--blue-ink)">Cheapest — or cut</span></h3>
+      <p>Behavioural tracking ("followed around the internet, graded"). Quality unproven: Jerome's cold-call spot check went nowhere; Taylor's history with this category says tire-kickers. Access received 15 Jul, evaluation underway. Fallback: sell cheap Meta leads as the budget tier instead.</p>
+    </div>
+  </div>
+  <p class="note mut" style="margin-top:10px">Rule of thumb: Tier 1 guesses intent from behaviour; Tier 2 reads intent the prospect stated; Tier 3 has intent proven by an action in our funnel. <b>Price follows proof.</b> Full mechanics: <a href="../research/">Lead Tiers Research</a>.</p>
+</section>
+
+<section id="team">
+  <div class="sec-head"><span class="k">§2</span><h2>Who does what</h2></div>
+  <div class="tbl-wrap"><table class="tbl">
+    <thead><tr><th>Person</th><th>Status / role</th></tr></thead>
+    <tbody>
+      <tr><td>Will</td><td>Acting sales manager (temporary); owns offer, pricing, guarantees, sales team, Scott commercial terms</td></tr>
+      <tr><td>Taylor</td><td>Marketing engine, LeadHunter, tier pricing, Ryan &amp; Cole answer pack, ICP research</td></tr>
+      <tr><td>Dmytro ("Dimitri")</td><td>AI operations lead. Authored the GHL-first ops architecture; building the client template; collaborating with Taylor on landing templates</td></tr>
+      <tr><td>David Howard</td><td>Sales leader. Found the landing-page crisis; owns the outbound-AI compliance earmark; break-testing Scott's demo; reviewing Lead Distro vs in-house</td></tr>
+      <tr><td>Jerome</td><td>Partnerships. Wrote the 25-page offer overview; distributes access (Lead Distro, Scott demo); routes recordings to Will</td></tr>
+      <tr><td>Ro</td><td>Closer — retained (doubled commission + accelerators), deciding this week; training on the Republic offer</td></tr>
+      <tr><td>Christian</td><td>Setter — staying for now; catch-up call held</td></tr>
+      <tr><td>Larissa</td><td>New hire: onboarding + client management for Republic; possible short-term setter</td></tr>
+      <tr><td>Ryan &amp; Cole</td><td>Outside sales — sell Republic, first ~100 clients, own ads/marketer, need the answer pack to green-light</td></tr>
+      <tr><td>Scott (external)</td><td>Conversational AI appointment-setting inside GHL, 5 channels, done-for-you, ~$200/mo — <b>inbound-only</b> per Jerome; being break-tested</td></tr>
+      <tr><td>Stealth (partner)</td><td>Runs Meta ads for most ScaleLogix clients; sent ~$600/day at broken pages without flagging it; Taylor absorbing clients gradually</td></tr>
+      <tr><td>Clark</td><td>Dev on payroll — can code the lead round-robin "in a few hours"</td></tr>
+    </tbody>
+  </table></div>
+</section>
+
+<section id="model">
+  <div class="sec-head"><span class="k">§3</span><h2>The model</h2></div>
+
+  <div class="grid g2">
+    <div class="card">
+      <h3>Two supply engines</h3>
+      <p class="note"><b>Engine 1 — LeadHunter</b> (scraping / behavioural intent mining): finds people <i>saying</i> they need the service, 7-day window, 0–100 scoring, self-learning search database, no ad spend. The primary buyer-acquisition engine early.</p>
+      <p class="note" style="margin-top:10px"><b>Engine 2 — Data Moon</b> (DaaS): cheap behavioural data, sub-account per investor. Catalyst tier 25,000 credits/mo; top tier unlimited. We hold 8 white-label seats + unlimited data; $100/mo per client after 8.</p>
+    </div>
+    <div class="card">
+      <h3>Two funnels, in order</h3>
+      <p class="note"><b>Buyer funnel first</b> — businesses that pay for leads. "None of these leads matter unless they've got buyers." A $20k client's first win is their first buyer conversation.</p>
+      <p class="note" style="margin-top:10px"><b>Lead funnel second</b> — the inventory those buyers purchase. Opt-ins are fine to resell; booked-call leads are the premium product. Once a client has 1–3 steady buyers they graduate to their own Lead Distro (40% referral) or our equivalent rail.</p>
+    </div>
+  </div>
+
+  <h3 style="margin-top:24px">Republic ops architecture — Dmytro's GHL-first draft</h3>
+  <p class="note mut">Principle: ~99% of Republic runs inside GoHighLevel. No custom builds, no onboarding clients into third-party systems we don't own.</p>
+  <div class="grid g2" style="margin-top:12px">
+    <div class="card">
+      <h3>B2B half — get the client BUYERS</h3>
+      <ul class="ck" data-scope="model-b2b" style="margin-top:6px">
+        <li><input type="checkbox" id="m1" data-key="m-b2b-1"><label for="m1">Landing pages/funnels for the client's agency — <b>one per ICP</b> (niche + location, e.g. HVAC · Chicago · zip codes · pay-per-lead)</label></li>
+        <li><input type="checkbox" id="m2" data-key="m-b2b-2"><label for="m2">Buyer pipeline: new lead → … → closed/won buyer</label></li>
+        <li><input type="checkbox" id="m3" data-key="m-b2b-3"><label for="m3">Invoicing automation: monthly qualified-lead count → auto invoice → check payment → close or escalate (Stripe candidate)</label></li>
+        <li><input type="checkbox" id="m4" data-key="m-b2b-4"><label for="m4">Reporting dashboard per buyer + agency rollup</label></li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3>B2C half — get the LEADS buyers pay for</h3>
+      <ul class="ck" data-scope="model-b2c" style="margin-top:6px">
+        <li><input type="checkbox" id="m5" data-key="m-b2c-1"><label for="m5">Landings/funnels/creatives per ICP to attract end-leads</label></li>
+        <li><input type="checkbox" id="m6" data-key="m-b2c-2"><label for="m6">Qualification pipeline per ICP — hard-rule automations, <b>minutes not hours</b>, AI qualifies without outbound calling</label></li>
+        <li><input type="checkbox" id="m7" data-key="m-b2c-3"><label for="m7">Instant delivery into the buyer's pipeline AND their own system (e.g. Housecall Pro)</label></li>
+        <li><input type="checkbox" id="m8" data-key="m-b2c-4"><label for="m8">Round-robin routing across matching active buyers</label></li>
+        <li><input type="checkbox" id="m9" data-key="m-b2c-5"><label for="m9">Buyer active/inactive kill-switch — bankrupt buyer → routing stops instantly</label></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="grid g2" style="margin-top:16px">
+    <div class="callout acc">
+      <div class="ttl">TWO SERVICE LEVELS (pricing lever)</div>
+      <p><b>Basic</b> — qualify against the buyer's parameters → deliver immediately on match.<br><b>Premium</b> — qualify <b>and schedule the appointment</b> (AI outbound <i>or</i> human setter) → delivered at "scheduled" stage, priced higher. Premium is exactly where the compliance risk lives →</p>
+    </div>
+    <div class="callout risk">
+      <div class="ttl">⚠ THE COMPLIANCE EARMARK (David)</div>
+      <p>Inbound AI is fine. <b>Outbound AI voice is gated</b>: GHL/Twilio demand proven opt-in and approval; state law adds AI-disclosure rules (e.g. California); some verticals have their own regs. Voice quality itself is a conversion risk. <b>Do not let outbound AI become a silent load-bearing assumption</b> — break-test Scott's demo, map compliance per industry BEFORE picking launch verticals. Worst case: a human setter slides in.</p>
+    </div>
+  </div>
+
+  <div class="card" style="margin-top:16px">
+    <h3>Lead Distro — adopt, replicate, or drop (D6)</h3>
+    <p class="note"><b>For:</b> ready-made distribution + marketplace with per-lead payment collection; clients graduate to their own account; 40% referral deal with the founder. <b>Against:</b> round-robins are already coded in-house, Clark can rebuild the routing in hours, it looks like a simple Vercel build, and it onboards clients into a system we don't own. Not locked in — David reviewing the login vs a GHL-native round-robin.</p>
+  </div>
+</section>
+
+<section id="workstreams">
+  <div class="sec-head"><span class="k">§4</span><h2>Workstreams</h2><span class="spacer"></span><span class="legend"><span class="chip risk"><span class="dot risk"></span>urgent</span><span class="chip warn"><span class="dot warn"></span>in motion</span><span class="chip"><span class="dot mut"></span>not started</span></span></div>
+
+  <div class="grid g2">
+    <div class="card" data-scope="ws6">
+      <h3><span class="chip risk"><span class="dot risk"></span>WS-6</span> &nbsp;ScaleLogix landing-page crisis (CRO)</h3>
+      <p class="note">GHL's <b>beta</b> AI page-builder ("clone across all sub-accounts") shipped template junk: no UVP, no proof, fake CTAs, <b>not wired into pipelines</b> — while Stealth kept ~$600/day flowing. David fixed the wiring; the bad pages are still live. Conversion data from this period is meaningless.</p>
+      <ul class="ck" style="margin-top:12px">
+        <li><input type="checkbox" id="w61" data-key="ws6-1"><label for="w61">Taylor → ICP/funnel docs + page URLs to Dmytro (DM)<span class="who">TAYLOR</span></label></li>
+        <li><input type="checkbox" id="w62" data-key="ws6-2"><label for="w62">ICP research per vertical: pain points, messaging, offer<span class="who">TAYLOR</span></label></li>
+        <li><input type="checkbox" id="w63" data-key="ws6-3"><label for="w63">Reusable landing template — one page per ICP, 2–3 split-test variants<span class="who">DMYTRO</span></label></li>
+        <li><input type="checkbox" id="w64" data-key="ws6-4"><label for="w64">Figma CRO samples shared + structure review<span class="who">DAVID</span></label></li>
+        <li><input type="checkbox" id="w65" data-key="ws6-5"><label for="w65">Decide page ownership after rebuild (D9 — Stealth in doubt)<span class="who">TEAM</span></label></li>
+      </ul>
+      <div class="prog-row js-prog" data-for="ws6"><div class="bar"><i></i></div><span class="pct"></span></div>
+    </div>
+
+    <div class="card" data-scope="ws1">
+      <h3><span class="chip risk"><span class="dot risk"></span>WS-1</span> &nbsp;Rebuild the Meta ads system</h3>
+      <p class="note">The old pixel is poisoned — DQ data fired back until Meta optimised toward broke leads; lead-form campaigns accelerated it. Result: 30 opt-ins/day, zero booked calls. Full restart.</p>
+      <ul class="ck" style="margin-top:12px">
+        <li><input type="checkbox" id="w11" data-key="ws1-1"><label for="w11"><b>Brand-new pixel</b> (B2C first; both sides if needed)</label></li>
+        <li><input type="checkbox" id="w12" data-key="ws1-2"><label for="w12">Zapier flow: DQ never reaches the pixel; <b>no pixel on DQ pages at all</b></label></li>
+        <li><input type="checkbox" id="w13" data-key="ws1-3"><label for="w13">Revamp all ads, messaging, qualifying form (Fathom-mined messaging)</label></li>
+        <li><input type="checkbox" id="w14" data-key="ws1-4"><label for="w14">Hard-headed application funnel: scarcity, one shot, booked calls over opt-ins</label></li>
+        <li><input type="checkbox" id="w15" data-key="ws1-5"><label for="w15">Budget routing: $10–20k → lead gen · &lt;$20k → downsell (kept + nurtured) · $25k+ → highest-ticket tag</label></li>
+        <li><input type="checkbox" id="w16" data-key="ws1-6"><label for="w16">~80/20 lead-gen : agency split; final funnel structure (D4)</label></li>
+      </ul>
+      <div class="prog-row js-prog" data-for="ws1"><div class="bar"><i></i></div><span class="pct"></span></div>
+    </div>
+
+    <div class="card" data-scope="ws2">
+      <h3><span class="chip warn"><span class="dot warn"></span>WS-2</span> &nbsp;Ryan &amp; Cole answer pack</h3>
+      <p class="note">The most time-sensitive deliverable — they green-light their own marketing off it. Everything comes from the <a href="../research/">research battery</a>.</p>
+      <ul class="ck" style="margin-top:12px">
+        <li><input type="checkbox" id="w21" data-key="ws2-1"><label for="w21">Supply floor per vertical (0.1/A1)</label></li>
+        <li><input type="checkbox" id="w22" data-key="ws2-2"><label for="w22">Buyer capacity per vertical (0.2)</label></li>
+        <li><input type="checkbox" id="w23" data-key="ws2-3"><label for="w23">Guarantee validation at worst-quartile (0.3/B6)</label></li>
+        <li><input type="checkbox" id="w24" data-key="ws2-4"><label for="w24">Spend-to-leads table: CPL at $1k/$2.5k/$5k (A4)</label></li>
+      </ul>
+      <div class="prog-row js-prog" data-for="ws2"><div class="bar"><i></i></div><span class="pct"></span></div>
+    </div>
+
+    <div class="card" data-scope="ws3">
+      <h3><span class="chip warn"><span class="dot warn"></span>WS-3</span> &nbsp;Tool evaluations</h3>
+      <ul class="ck" style="margin-top:12px">
+        <li><input type="checkbox" id="w31" data-key="ws3-1"><label for="w31"><b>Data Moon</b> — structured quality/pricing eval (access received 15 Jul)<span class="who">TAYLOR</span></label></li>
+        <li><input type="checkbox" id="w32" data-key="ws3-2"><label for="w32"><b>Scott's demo</b> — break-test: voice, inbound-only claim, economics<span class="who">DAVID</span></label></li>
+        <li><input type="checkbox" id="w33" data-key="ws3-3"><label for="w33"><b>Lead Distro</b> — capability review vs GHL round-robin<span class="who">DAVID</span></label></li>
+        <li><input type="checkbox" id="w34" data-key="ws3-4"><label for="w34"><b>Perspective.io</b> — assess, optional test funnel, report<span class="who">TAYLOR</span></label></li>
+        <li><input type="checkbox" id="w35" data-key="ws3-5"><label for="w35"><b>Circle course</b> — scrape, map vs LeadHunter, propose modules<span class="who">TAYLOR</span></label></li>
+        <li><input type="checkbox" id="w36" data-key="ws3-6"><label for="w36"><b>Will's lead-layers PDF</b> — review, flag errors<span class="who">TAYLOR</span></label></li>
+      </ul>
+      <div class="prog-row js-prog" data-for="ws3"><div class="bar"><i></i></div><span class="pct"></span></div>
+    </div>
+
+    <div class="card" data-scope="ws4">
+      <h3><span class="chip warn"><span class="dot warn"></span>WS-4</span> &nbsp;Fulfilment ops with Dmytro</h3>
+      <p class="note">Intro call done 15 Jul — the GHL-first draft holds. Target: onboarding + fulfilment dialled in by early next week.</p>
+      <ul class="ck" style="margin-top:12px">
+        <li><input type="checkbox" id="w41" data-key="ws4-1"><label for="w41">Dmytro's ops notes → Google Doc, shared<span class="who">DMYTRO</span></label></li>
+        <li><input type="checkbox" id="w42" data-key="ws4-2"><label for="w42">25-page offer overview → Dmytro; ops draft aligned to the actual promise<span class="who">JEROME</span></label></li>
+        <li><input type="checkbox" id="w43" data-key="ws4-3"><label for="w43">Build GHL client-template demo + break-test before first client<span class="who">DMYTRO</span></label></li>
+      </ul>
+      <div class="prog-row js-prog" data-for="ws4"><div class="bar"><i></i></div><span class="pct"></span></div>
+    </div>
+
+    <div class="card" data-scope="ws57">
+      <h3><span class="chip"><span class="dot mut"></span>WS-5 + WS-7</span> &nbsp;LeadHunter scale &amp; tier pricing</h3>
+      <ul class="ck" style="margin-top:12px">
+        <li><input type="checkbox" id="w51" data-key="ws5-1"><label for="w51">Sub-account architecture (each investor gets LeadHunter access)</label></li>
+        <li><input type="checkbox" id="w52" data-key="ws5-2"><label for="w52">Run the Codex live battery (supply floor / buyer capacity engine)</label></li>
+        <li><input type="checkbox" id="w71" data-key="ws7-1"><label for="w71">Map LeadHunter's 3 internal sub-tiers against the cost dashboard</label></li>
+        <li><input type="checkbox" id="w72" data-key="ws7-2"><label for="w72">Tier-3 siphon spec: triggers, tagging, freshness SLA</label></li>
+        <li><input type="checkbox" id="w73" data-key="ws7-3"><label for="w73">Price all 3 tiers + basic/premium service levels → Will</label></li>
+      </ul>
+      <div class="prog-row js-prog" data-for="ws57"><div class="bar"><i></i></div><span class="pct"></span></div>
+    </div>
+  </div>
+
+  <div class="callout warn" style="margin-top:16px">
+    <div class="ttl">WHY THE PIXEL DIED (for the record)</div>
+    <p>Clean launch → early wins taught Meta a small "good" pool → DQ data kept firing to the pixel with no exclusion → DQ outpaced qualified → tipping point: Meta optimised <i>toward</i> DQ → lead-form volume campaigns (Joe's mandate) accelerated it. Fix = fresh pixel + zero-tolerance DQ exclusion + harder funnel. With the right messaging Meta needs 2–3 quality conversions to lock on, not a long warm-up.</p>
+  </div>
+</section>
+
+<section id="questions">
+  <div class="sec-head"><span class="k">§6</span><h2>The question bank</h2><span class="spacer"></span><span class="js-qcount mut" style="font-size:12.5px"></span></div>
+  <p class="note mut" style="margin-bottom:14px">★ = get these even if time is short. Guarantee-backing numbers get set at the <b>worst quartile</b>, never the average. Tick a question when it has a written, evidenced answer.</p>
+
+  <div class="qtools">
+    <button class="fbtn" data-group="all" aria-pressed="true" type="button">All</button>
+    <button class="fbtn" data-group="0" aria-pressed="false" type="button">Group 0 · Sales</button>
+    <button class="fbtn" data-group="A" aria-pressed="false" type="button">A · Supply</button>
+    <button class="fbtn" data-group="B" aria-pressed="false" type="button">B · Buyers</button>
+    <button class="fbtn" data-group="C" aria-pressed="false" type="button">C · Capacity</button>
+    <button class="fbtn" data-group="D" aria-pressed="false" type="button">D · Ops/Compliance</button>
+    <button class="fbtn" data-star aria-pressed="false" type="button">★ Starred only</button>
+    <input type="search" class="js-qsearch" placeholder="Search questions…" aria-label="Search questions">
+  </div>
+
+  <div class="js-qbank">
+    <div class="q-item" data-group="0" data-star="1"><input type="checkbox" id="q01" data-key="q-0-1" aria-label="answered"><span class="tag">0.1</span><div><p><span class="star">★</span> <b>Supply floor per vertical:</b> how many 70+ intent leads/month can LeadHunter scrape (e.g. roofing) before clients must start their own ad spend? Is there a floor at all?</p><p class="feeds">Feeds: sales pack · guarantee · capacity</p></div></div>
+    <div class="q-item" data-group="0" data-star="1"><input type="checkbox" id="q02" data-key="q-0-2" aria-label="answered"><span class="tag">0.2</span><div><p><span class="star">★</span> <b>Buyer capacity per vertical:</b> if 10–30 clients pick the same vertical the same month, how many intent buyers can we source monthly for each?</p><p class="feeds">Feeds: guarantee stack · onboarding pacing</p></div></div>
+    <div class="q-item" data-group="0" data-star="1"><input type="checkbox" id="q03" data-key="q-0-3" aria-label="answered"><span class="tag">0.3</span><div><p><span class="star">★</span> <b>Guarantee reality-check:</b> 50 verified intent buyers → 15 conversations in 90 days, no paid spend, setters calling 70+ records. Realistic, or smoke? (Pushable to 6 months.)</p><p class="feeds">Feeds: contract guarantees</p></div></div>
+    <div class="q-item" data-group="0" data-star="0"><input type="checkbox" id="q04" data-key="q-0-4" aria-label="answered"><span class="tag">0.4</span><div><p><b>Ad-spend benchmarks:</b> what monthly spend fulfils X leads/month per vertical ($3k/mo → how many wealth-management leads; what spend serves a 30k-leads/mo whale)?</p><p class="feeds">Feeds: sales pack · client expectations</p></div></div>
+    <div class="q-item" data-group="0" data-star="0"><input type="checkbox" id="q05" data-key="q-0-5" aria-label="answered"><span class="tag">0.5</span><div><p><b>Territory:</b> if 10 clients pick roofing, locked per region/state or open? (Decision D1 — Will punted to Taylor: "whatever's more scalable.")</p><p class="feeds">Feeds: every supply number — decide first</p></div></div>
+    <div class="q-item" data-group="A" data-star="1"><input type="checkbox" id="qa1" data-key="q-a-1" aria-label="answered"><span class="tag">A1</span><div><p><span class="star">★</span> Engine 1 realistic (not theoretical) volume of usable, <b>enriched</b> leads per vertical per month — the quantified supply floor.</p><p class="feeds">Feeds: no-ad-spend claim</p></div></div>
+    <div class="q-item" data-group="A" data-star="1"><input type="checkbox" id="qa2" data-key="q-a-2" aria-label="answered"><span class="tag">A2</span><div><p><span class="star">★</span> All-in cost of an Engine 1 lead (data + enrichment + outreach touch) vs an Engine 2 opt-in lead, at each budget level.</p><p class="feeds">Feeds: tier pricing · margins</p></div></div>
+    <div class="q-item" data-group="A" data-star="0"><input type="checkbox" id="qa3" data-key="q-a-3" aria-label="answered"><span class="tag">A3</span><div><p>Reply/engagement rate on Engine 1 outreach — how many scraped records become an engaged, sellable lead? <span class="mut">(Needs the 90-day outreach tracker, not just a scrape run.)</span></p><p class="feeds">Feeds: guarantee maths</p></div></div>
+    <div class="q-item" data-group="A" data-star="0"><input type="checkbox" id="qa4" data-key="q-a-4" aria-label="answered"><span class="tag">A4</span><div><p>Engine 2 paid opt-in: realistic <b>CPL by vertical at $1k / $2.5k / $5k monthly spend</b> — this IS the spend-to-leads table and the Lead Flow Guarantee backbone.</p><p class="feeds">Feeds: sales pack · Tier-3 economics</p></div></div>
+    <div class="q-item" data-group="A" data-star="0"><input type="checkbox" id="qa5" data-key="q-a-5" aria-label="answered"><span class="tag">A5</span><div><p>Substantiation behind the <b>91% match rate</b> and the 10 → 5–7 conversations → ~2 deals pipeline: where does the data live, which verticals, what sample size? The most-quoted sales stat — <b>the file must exist.</b></p><p class="feeds">Feeds: compliance-safe sales claims</p></div></div>
+    <div class="q-item" data-group="B" data-star="1"><input type="checkbox" id="qb6" data-key="q-b-6" aria-label="answered"><span class="tag">B6</span><div><p><span class="star">★</span> Of 50 verified intent buyers worked (email + LinkedIn + calls): how many held conversations in 90 days? In 6 months? → locks the 6/15 buyer-pipeline numbers at worst-quartile.</p><p class="feeds">Feeds: Buyer Pipeline Guarantee</p></div></div>
+    <div class="q-item" data-group="B" data-star="1"><input type="checkbox" id="qb7" data-key="q-b-7" aria-label="answered"><span class="tag">B7</span><div><p><span class="star">★</span> Written definition of a <b>"verified high-intent buyer"</b>: which signals, what recency window (7-day?), the three intent levels — exact criteria. Becomes the intent-criteria sheet AND the guarantee's verification standard.</p><p class="feeds">Feeds: guarantees · setter SOP</p></div></div>
+    <div class="q-item" data-group="B" data-star="0"><input type="checkbox" id="qb8" data-key="q-b-8" aria-label="answered"><span class="tag">B8</span><div><p>Typical time-to-first-closed-buyer for an operator who does the work — what did past accounts show? Substantiates the First Buyer Guarantee window.</p><p class="feeds">Feeds: guarantee window</p></div></div>
+    <div class="q-item" data-group="C" data-star="0"><input type="checkbox" id="qc11" data-key="q-c-11" aria-label="answered"><span class="tag">C11</span><div><p>Per vertical: the right paid-vs-scraped mix at launch vs at scale — and at what buyer volume does an operator NEED their own ad engine vs riding data + wholesale?</p><p class="feeds">Feeds: client roadmap · Circle course</p></div></div>
+    <div class="q-item" data-group="C" data-star="0"><input type="checkbox" id="qc12" data-key="q-c-12" aria-label="answered"><span class="tag">C12</span><div><p>Production capacity ceiling per vertical right now — how many operators can Engine 1 supply simultaneously before quality dilutes? The honest capacity-scarcity number.</p><p class="feeds">Feeds: sales pacing · territory</p></div></div>
+    <div class="q-item" data-group="D" data-star="1"><input type="checkbox" id="qd13" data-key="q-d-13" aria-label="answered"><span class="tag">D13</span><div><p><span class="star">★</span> Outbound AI voice: exactly which compliance gates apply per launch industry (GHL/Twilio opt-in proof + approval, state AI-disclosure laws, vertical regs) — and does the premium service level survive them?</p><p class="feeds">Feeds: launch verticals · premium pricing</p></div></div>
+    <div class="q-item" data-group="D" data-star="1"><input type="checkbox" id="qd14" data-key="q-d-14" aria-label="answered"><span class="tag">D14</span><div><p><span class="star">★</span> Scott's system: does it pass the break-test — voice quality, genuinely inbound-only, clean GHL install, economics at ~$200/mo per client?</p><p class="feeds">Feeds: speed-to-lead decision D3</p></div></div>
+    <div class="q-item" data-group="D" data-star="0"><input type="checkbox" id="qd15" data-key="q-d-15" aria-label="answered"><span class="tag">D15</span><div><p>Data Moon quality on a structured sample: % contactable, % real intent — sellable as Tier 1, or replaced by cheap Meta leads?</p><p class="feeds">Feeds: tier structure</p></div></div>
+    <div class="q-item" data-group="D" data-star="0"><input type="checkbox" id="qd16" data-key="q-d-16" aria-label="answered"><span class="tag">D16</span><div><p>Lead Distro vs in-house: can a Clark-coded GHL round-robin + Stripe invoicing replicate what we'd actually use? What does the 40% referral earn vs owning the rail?</p><p class="feeds">Feeds: decision D6</p></div></div>
+    <div class="q-item" data-group="D" data-star="0"><input type="checkbox" id="qd17" data-key="q-d-17" aria-label="answered"><span class="tag">D17</span><div><p>Qualification SLA: can GHL automations reliably qualify + route in <b>minutes</b> at volume, including delivery into third-party buyer systems (Housecall Pro etc.)?</p><p class="feeds">Feeds: ops build acceptance test</p></div></div>
+    <div class="q-item" data-group="D" data-star="0"><input type="checkbox" id="qd18" data-key="q-d-18" aria-label="answered"><span class="tag">D18</span><div><p>Launch industries: which verticals open first, given per-vertical compliance, LeadHunter ceilings and buyer supply? Feeds the per-industry testing protocol.</p><p class="feeds">Feeds: go-live gate</p></div></div>
+  </div>
+
+  <div class="callout warn" style="margin-top:16px">
+    <div class="ttl">NUMBERING GAP</div>
+    <p>The supplied question set jumps B8 → C11 — <b>questions 9 and 10 were never provided</b> (possibly a missing group on buyer economics/pricing). Confirm with the source before treating the bank as complete.</p>
+  </div>
+</section>
+
+<section id="decisions">
+  <div class="sec-head"><span class="k">§7</span><h2>Open decisions</h2></div>
+  <div class="tbl-wrap"><table class="tbl">
+    <thead><tr><th>#</th><th>Decision</th><th>Leaning / owner</th><th>Why it matters</th></tr></thead>
+    <tbody>
+      <tr><td>D1</td><td>Territory exclusivity — locked state/region vs open, per vertical</td><td>Taylor recommends, Will ratifies</td><td><b>Decide first</b> — drives all supply maths</td></tr>
+      <tr><td>D2</td><td>Internal agency pricing — discount lever vs hold ~$15k</td><td>Taylor rec → Will</td><td>Feeds funnel routing</td></tr>
+      <tr><td>D3</td><td>Speed-to-lead — Scott white-label vs build our own</td><td>Will owns Scott; David testing</td><td>Standard install for every client</td></tr>
+      <tr><td>D4</td><td>Funnel structure — one + spinoff vs two; exact 80/20</td><td>Taylor</td><td>Avoid double work</td></tr>
+      <tr><td>D5</td><td>Buyer-funnel vs lead-funnel phasing</td><td>Taylor + Dmytro</td><td>Buyers first — always</td></tr>
+      <tr><td>D6</td><td>Lead Distro: adopt / replicate / drop</td><td>David reviewing</td><td>Blocks client onboarding design</td></tr>
+      <tr><td>D7</td><td>Service-level pricing; premium's outbound = AI or human</td><td>Taylor + Will</td><td>Compliance (D13) decides the AI option</td></tr>
+      <tr><td>D8</td><td>Launch industries + per-industry testing protocol</td><td>Taylor proposed; team</td><td>Gates go-live</td></tr>
+      <tr><td>D9</td><td>Who owns the rebuilt ScaleLogix pages</td><td>David sceptical of Stealth</td><td>WS-6 endgame</td></tr>
+    </tbody>
+  </table></div>
+</section>
+
+<section id="inputs">
+  <div class="sec-head"><span class="k">§8</span><h2>Inputs we're waiting on</h2></div>
+  <div class="grid g2">
+    <div class="card" data-scope="inp-will">
+      <h3>From Will</h3>
+      <ul class="ck" style="margin-top:6px">
+        <li><input type="checkbox" id="i1" data-key="inp-1"><label for="i1"><b>Guarantee stack link</b> — needed for 0.3 / B6 / B8 validation</label></li>
+        <li><input type="checkbox" id="i2" data-key="inp-2" checked><label for="i2">Data Moon access <span class="mut">(received 15 Jul)</span></label></li>
+        <li><input type="checkbox" id="i3" data-key="inp-3"><label for="i3">Confirm Perspective.io access is live</label></li>
+        <li><input type="checkbox" id="i4" data-key="inp-4"><label for="i4">Confirm whether questions 9–10 exist</label></li>
+      </ul>
+      <div class="prog-row js-prog" data-for="inp-will"><div class="bar"><i></i></div><span class="pct"></span></div>
+    </div>
+    <div class="card" data-scope="inp-ops">
+      <h3>From the ops call</h3>
+      <ul class="ck" style="margin-top:6px">
+        <li><input type="checkbox" id="i5" data-key="inp-5"><label for="i5">Dmytro → ops notes to Google Doc, shared with David &amp; Taylor</label></li>
+        <li><input type="checkbox" id="i6" data-key="inp-6"><label for="i6">Jerome → offer overview to Dmytro · Lead Distro login to David · Scott demo access · recording to Will</label></li>
+        <li><input type="checkbox" id="i7" data-key="inp-7"><label for="i7">David → Figma CRO samples to Dmytro &amp; Taylor</label></li>
+        <li><input type="checkbox" id="i8" data-key="inp-8"><label for="i8">Taylor → ICP/funnel docs + landing URLs to Dmytro</label></li>
+      </ul>
+      <div class="prog-row js-prog" data-for="inp-ops"><div class="bar"><i></i></div><span class="pct"></span></div>
+    </div>
+  </div>
+</section>
+
+<section id="actions">
+  <div class="sec-head"><span class="k">§9</span><h2>Action items from the recordings</h2></div>
+  <div class="grid g2">
+    <div class="card" data-scope="act1">
+      <h3>Call 1 — Will · <a href="https://fathom.video/share/mzexCwDeSVPEeG1XzsW4T34xsJDyfxfe" target="_blank" rel="noopener">recording</a></h3>
+      <ul class="ck" style="margin-top:6px">
+        <li><input type="checkbox" id="a11" data-key="act1-1"><label for="a11">[09:01] Review Perspective.io trial; test funnel; report <a href="https://fathom.video/share/mzexCwDeSVPEeG1XzsW4T34xsJDyfxfe?timestamp=540.9999" target="_blank" rel="noopener">watch</a></label></li>
+        <li><input type="checkbox" id="a12" data-key="act1-2"><label for="a12">[11:18] Scrape Circle course; compare to LeadHunter; propose modules <a href="https://fathom.video/share/mzexCwDeSVPEeG1XzsW4T34xsJDyfxfe?timestamp=677.9999" target="_blank" rel="noopener">watch</a></label></li>
+        <li><input type="checkbox" id="a13" data-key="act1-3"><label for="a13">[17:05] New pixel; exclude DQ; revamp ads/forms; budget routing; 80/20 <a href="https://fathom.video/share/mzexCwDeSVPEeG1XzsW4T34xsJDyfxfe?timestamp=1024.9999" target="_blank" rel="noopener">watch</a></label></li>
+        <li><input type="checkbox" id="a14" data-key="act1-4"><label for="a14">[26:09] Will: send guarantee stack link <a href="https://fathom.video/share/mzexCwDeSVPEeG1XzsW4T34xsJDyfxfe?timestamp=1568.9999" target="_blank" rel="noopener">watch</a></label></li>
+        <li><input type="checkbox" id="a15" data-key="act1-5" checked><label for="a15">[30:12] Will: grant Data Moon access <a href="https://fathom.video/share/mzexCwDeSVPEeG1XzsW4T34xsJDyfxfe?timestamp=1811.9999" target="_blank" rel="noopener">watch</a></label></li>
+        <li><input type="checkbox" id="a16" data-key="act1-6"><label for="a16">[33:26] Slack answers → Ryan &amp; Cole (capacity, spend, guarantees, speed-to-lead) <a href="https://fathom.video/share/mzexCwDeSVPEeG1XzsW4T34xsJDyfxfe?timestamp=2005.9999" target="_blank" rel="noopener">watch</a></label></li>
+      </ul>
+      <div class="prog-row js-prog" data-for="act1"><div class="bar"><i></i></div><span class="pct"></span></div>
+    </div>
+    <div class="card" data-scope="act2">
+      <h3>Call 2 — Ops + CRO · <a href="https://fathom.video/share/vnJnKXNK64uwdoD5Rsy33hSWqAx3bcMx" target="_blank" rel="noopener">recording</a></h3>
+      <ul class="ck" style="margin-top:6px">
+        <li><input type="checkbox" id="a21" data-key="act2-1"><label for="a21">[11:49] Dmytro: DM Taylor for ICP docs → landing template <a href="https://fathom.video/share/vnJnKXNK64uwdoD5Rsy33hSWqAx3bcMx?timestamp=709.9999" target="_blank" rel="noopener">watch</a></label></li>
+        <li><input type="checkbox" id="a22" data-key="act2-2"><label for="a22">[12:26] David: share Figma CRO examples <a href="https://fathom.video/share/vnJnKXNK64uwdoD5Rsy33hSWqAx3bcMx?timestamp=746.9999" target="_blank" rel="noopener">watch</a></label></li>
+        <li><input type="checkbox" id="a23" data-key="act2-3"><label for="a23">[24:53] Break-test Scott's speed-to-lead demo <a href="https://fathom.video/share/vnJnKXNK64uwdoD5Rsy33hSWqAx3bcMx?timestamp=1493.9999" target="_blank" rel="noopener">watch</a></label></li>
+        <li><input type="checkbox" id="a24" data-key="act2-4"><label for="a24">[33:41] Jerome: Lead Distro login → David; review vs round-robin <a href="https://fathom.video/share/vnJnKXNK64uwdoD5Rsy33hSWqAx3bcMx?timestamp=2021.9999" target="_blank" rel="noopener">watch</a></label></li>
+        <li><input type="checkbox" id="a25" data-key="act2-5"><label for="a25">[39:19] Dmytro: ops notes → Google Doc, share <a href="https://fathom.video/share/vnJnKXNK64uwdoD5Rsy33hSWqAx3bcMx?timestamp=2359.9999" target="_blank" rel="noopener">watch</a></label></li>
+        <li><input type="checkbox" id="a26" data-key="act2-6"><label for="a26">[40:18] Taylor: review Data Moon quality/pricing <a href="https://fathom.video/share/vnJnKXNK64uwdoD5Rsy33hSWqAx3bcMx?timestamp=2418.9999" target="_blank" rel="noopener">watch</a></label></li>
+        <li><input type="checkbox" id="a27" data-key="act2-7"><label for="a27">[43:34] Jerome: offer overview → Dmytro; align ops draft <a href="https://fathom.video/share/vnJnKXNK64uwdoD5Rsy33hSWqAx3bcMx?timestamp=2614.9999" target="_blank" rel="noopener">watch</a></label></li>
+        <li><input type="checkbox" id="a28" data-key="act2-8"><label for="a28">[44:15] Jerome: send recording to Will <a href="https://fathom.video/share/vnJnKXNK64uwdoD5Rsy33hSWqAx3bcMx?timestamp=2655.9999" target="_blank" rel="noopener">watch</a></label></li>
+      </ul>
+      <div class="prog-row js-prog" data-for="act2"><div class="bar"><i></i></div><span class="pct"></span></div>
+    </div>
+  </div>
+</section>
+
+<section id="sequence">
+  <div class="sec-head"><span class="k">§10</span><h2>Attack sequence</h2></div>
+  <div class="card">
+    <ol style="padding-left:20px;display:grid;gap:8px;font-size:13.5px;color:var(--ink-2)">
+      <li><b>WS-6 landing crisis</b> — urgent parallel track; live spend hitting broken pages right now</li>
+      <li><b>Decide D1 territory</b> — unblocks all supply-floor maths</li>
+      <li><b>LeadHunter live battery via Codex</b> — the one analysis most starred questions collapse into</li>
+      <li><b>Data Moon evaluation</b> — keep as Tier 1 or replace with cheap Meta leads</li>
+      <li><b>Scott break-test + compliance map</b> — before anything depends on it</li>
+      <li><b>WS-1 pixel rebuild</b> in parallel — nothing blocks it</li>
+      <li><b>GHL ops build with Dmytro</b> — demo before the first client</li>
+      <li><b>Answer the bank → Ryan &amp; Cole pack</b> + tier pricing</li>
+      <li><b>Remaining tool evals</b> as capacity allows</li>
+    </ol>
+    <p class="note" style="margin-top:14px">The gating constraint everywhere is <b>LeadHunter's real per-vertical throughput and cost</b>. Build that first and the guarantees, the sales table and the capacity ceiling all fall out of it. Full phased roadmap: <a href="../plan/">Go-Live Plan</a>.</p>
+  </div>
+</section>
+
+<section id="source">
+  <div class="sec-head"><span class="k">APPENDIX</span><h2>Source &amp; transcripts</h2></div>
+  <div class="card">
+    <p class="note">Both calls happened 15 July 2026. Full verbatim transcripts (with inline action items) are Appendices A &amp; B of the downloadable spec.</p>
+    <div class="meta-chips">
+      <a class="btn ghost" href="https://fathom.video/share/mzexCwDeSVPEeG1XzsW4T34xsJDyfxfe" target="_blank" rel="noopener">▶ Call 1 — Will (39 min)</a>
+      <a class="btn ghost" href="https://fathom.video/share/vnJnKXNK64uwdoD5Rsy33hSWqAx3bcMx" target="_blank" rel="noopener">▶ Call 2 — Ops + CRO (45 min)</a>
+      <a class="btn" href="../downloads/Republic_LeadGen_Spec_2026-07-15.md" download>Download full spec (.md)</a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <span><b>REPUBLIC</b> · Master Spec</span>
+    <span>Prepared by Taylor Cunningham · ScaleLogix AI</span>
+    <span>v2 · 15 July 2026</span>
+    <span class="mut"><a href="../">← Command Center hub</a></span>
+  </div>
+</footer>
+
+<script src="../assets/app.js"></script>
+</body>
+</html>

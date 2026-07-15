@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Lead Tiers Research — Republic Lead Gen</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%2310141d'/%3E%3Ctext x='32' y='45' font-family='Arial' font-weight='900' font-size='36' fill='%238b6cd6' text-anchor='middle'%3ER%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body data-page="research">
+
+<header class="topbar">
+  <div class="topbar-in">
+    <a class="wordmark" href="../"><b><span>REPUBLIC</span></b><small>Command Center</small></a>
+    <nav class="topnav" aria-label="Dashboards">
+      <a href="../">Hub</a>
+      <a href="../spec/">Master Spec</a>
+      <a href="./" aria-current="page">Lead Tiers</a>
+      <a href="../plan/">Go-Live Plan</a>
+    </nav>
+    <div class="pageprog js-pageprog"><span>My progress</span><div class="bar"><i></i></div><span class="pct">0/0</span></div>
+  </div>
+</header>
+
+<div class="hero">
+  <div class="wrap">
+    <div class="crumb">Lead Tiers Research · mechanics, costs &amp; test protocols</div>
+    <h1>Three tiers of intent. Price follows proof.</h1>
+    <p class="lede">Tier 1 guesses intent from behaviour. Tier 2 reads intent the prospect stated in their own words. Tier 3 has intent proven by an action taken in our funnel. This dashboard holds the mechanics of each tier and the exact tests that turn claims into numbers.</p>
+    <div class="meta-chips">
+      <span class="chip blue"><span class="dot blue"></span>Tier 1 · Data Moon · cheapest</span>
+      <span class="chip acc"><span class="dot acc"></span>Tier 2 · LeadHunter · core</span>
+      <span class="chip copper"><span class="dot copper"></span>Tier 3 · Meta siphon · top price</span>
+      <button class="fbtn js-reset" type="button" style="margin-left:auto">Reset my progress</button>
+    </div>
+  </div>
+</div>
+
+<nav class="subnav" aria-label="Sections">
+  <div class="subnav-in">
+    <a href="#leadhunter">Tier 2 · LeadHunter</a><a href="#battery">Codex test battery</a><a href="#siphon">Tier 3 · Meta siphon</a><a href="#datamoon">Tier 1 · Data Moon</a><a href="#crosstier">Cross-tier</a><a href="#ledger">Open items</a>
+  </div>
+</nav>
+
+<main class="wrap">
+
+<section id="leadhunter">
+  <div class="sec-head"><span class="k">TIER 2</span><h2>LeadHunter — the core engine</h2></div>
+  <div class="grid g2">
+    <div class="card">
+      <h3>Mechanics — what we know</h3>
+      <ul style="padding-left:18px;display:grid;gap:7px;font-size:13.5px;color:var(--ink-2)">
+        <li><b>Behavioural intent mining:</b> finds people <i>saying</i> they urgently need the service — statements in their own words, not inferred clicks</li>
+        <li><b>7-day recency window</b> (30-day comparison pass in the battery)</li>
+        <li><b>0–100 scoring:</b> 70+ = sellable/guarantee-grade · 80+ = consistently qualified</li>
+        <li><b>Self-learning:</b> stores winning keyword patterns, retries winners, spends a few exploratory searches per run, builds its own database — volume should improve over time</li>
+        <li><b>Enriched output:</b> contactability fields (phone/email/LinkedIn); completeness measured in the battery</li>
+        <li><b>Provenance:</b> Taylor lands clients with it personally, without ads — the strongest proof of concept we have</li>
+      </ul>
+    </div>
+    <div class="callout warn">
+      <div class="ttl">CLAIMS THAT NEED A FILE BEHIND THEM (A5)</div>
+      <p>The <b>~91% match rate</b> and the <b>10 → 5–7 conversations → ~2 deals</b> pipeline will become the most-quoted stats in every sales call. Before a rep says them once: which verticals, what sample size, where does the data live? If the run says a different number, the different number wins.</p>
+      <p style="margin-top:8px" class="mut">Guarantee-backing numbers get set at the worst quartile, never the average.</p>
+    </div>
+  </div>
+
+  <h3 style="margin-top:24px">The three internal sub-tiers — to be mapped (WS-7)</h3>
+  <div class="tbl-wrap"><table class="tbl">
+    <thead><tr><th>Sub-tier</th><th>Score band / signal basis</th><th>Recency</th><th>Enrichment</th><th>Cost per record</th><th>Intended use</th></tr></thead>
+    <tbody>
+      <tr><td>LH-A (top)</td><td class="tbd">TBD — e.g. explicit "need it now" statement, 80+</td><td class="tbd">TBD</td><td class="tbd">TBD</td><td class="tbd">from cost dashboard</td><td class="tbd">guarantee-grade setter calls</td></tr>
+      <tr><td>LH-B (mid)</td><td class="tbd">TBD</td><td class="tbd">TBD</td><td class="tbd">TBD</td><td class="tbd">from cost dashboard</td><td class="tbd">TBD</td></tr>
+      <tr><td>LH-C (base)</td><td class="tbd">TBD</td><td class="tbd">TBD</td><td class="tbd">TBD</td><td class="tbd">from cost dashboard</td><td class="tbd">TBD</td></tr>
+    </tbody>
+  </table></div>
+  <p class="note mut" style="margin-top:10px">The cost dashboard must document, per vertical: cost per search/run · cost per raw vs per 70+ enriched record (all-in) · the cost curve as a vertical is mined deeper in one month · per-industry ceilings.</p>
+</section>
+
+<section id="battery">
+  <div class="sec-head"><span class="k">LIVE TEST</span><h2>The Codex battery — 16 questions, one run</h2></div>
+  <div class="callout acc" style="margin-bottom:16px">
+    <div class="ttl">RUN CONFIG</div>
+    <p>Same battery, <b>simultaneously across a spread of verticals</b> (suggested: roofing · plumbing · wealth management · legal/PI · one health vertical — swap for the real launch list). <b>Two passes per vertical:</b> buyer-intent records vs end-lead records, reported separately. Capture per record: intent score, match validity, resolvable location, signal recency, enrichment fields, cost. Bucket at 70+ and 80+, on 7-day and 30-day windows.</p>
+  </div>
+
+  <div class="grid g2">
+    <div class="card" data-scope="bat-a">
+      <h3>A · Supply volume <span class="mut">(→ 0.1/A1, 0.2, 0.3/B6)</span></h3>
+      <ul class="ck" style="margin-top:6px">
+        <li><input type="checkbox" id="b1" data-key="bat-1"><label for="b1">1 · 70+ records/month per vertical, <b>sustained</b> not burst; same at 80+</label></li>
+        <li><input type="checkbox" id="b2" data-key="bat-2"><label for="b2">2 · Split buyer-intent vs end-lead volume</label></li>
+        <li><input type="checkbox" id="b3" data-key="bat-3"><label for="b3">3 · 10 clients, same vertical, same month: does the pool support 50 verified buyers each — or dry up? (Direct guarantee test)</label></li>
+        <li><input type="checkbox" id="b4" data-key="bat-4"><label for="b4">4 · Volume decay: 7-day vs 30-day window</label></li>
+      </ul>
+      <div class="prog-row js-prog" data-for="bat-a"><div class="bar"><i></i></div><span class="pct"></span></div>
+    </div>
+    <div class="card" data-scope="bat-b">
+      <h3>B · Cost <span class="mut">(→ A2)</span></h3>
+      <ul class="ck" style="margin-top:6px">
+        <li><input type="checkbox" id="b5" data-key="bat-5"><label for="b5">5 · All-in cost per 70+ record per vertical; cost of a full 50-buyer batch</label></li>
+        <li><input type="checkbox" id="b6" data-key="bat-6"><label for="b6">6 · Does cost-per-qualified rise as a vertical is mined deeper in one month?</label></li>
+      </ul>
+      <div class="prog-row js-prog" data-for="bat-b"><div class="bar"><i></i></div><span class="pct"></span></div>
+    </div>
+    <div class="card" data-scope="bat-c">
+      <h3>C · Quality &amp; match <span class="mut">(→ A5)</span></h3>
+      <ul class="ck" style="margin-top:6px">
+        <li><input type="checkbox" id="b7" data-key="bat-7"><label for="b7">7 · Actual match rate per vertical + operational definition of "match"; does ~91% hold?</label></li>
+        <li><input type="checkbox" id="b8" data-key="bat-8"><label for="b8">8 · % fully enriched (contactable) vs partial</label></li>
+        <li><input type="checkbox" id="b9" data-key="bat-9"><label for="b9">9 · Sample sizes recorded behind every figure — the substantiation file exists</label></li>
+      </ul>
+      <div class="prog-row js-prog" data-for="bat-c"><div class="bar"><i></i></div><span class="pct"></span></div>
+    </div>
+    <div class="card" data-scope="bat-d">
+      <h3>D · Intent definition <span class="mut">(→ B7)</span></h3>
+      <ul class="ck" style="margin-top:6px">
+        <li><input type="checkbox" id="b10" data-key="bat-10"><label for="b10">10 · Which signals drive 70+ vs 80+ — captured in writing</label></li>
+        <li><input type="checkbox" id="b11" data-key="bat-11"><label for="b11">11 · Distinct intent tiers + the exact recency window that counts</label></li>
+        <li><input type="checkbox" id="b12" data-key="bat-12"><label for="b12">12 · The writable criteria for a "verified high-intent buyer" — the standard a setter and a guarantee can be held to</label></li>
+      </ul>
+      <div class="prog-row js-prog" data-for="bat-d"><div class="bar"><i></i></div><span class="pct"></span></div>
+    </div>
+    <div class="card" data-scope="bat-e">
+      <h3>E · Geography <span class="mut">(→ D1 territory)</span></h3>
+      <ul class="ck" style="margin-top:6px">
+        <li><input type="checkbox" id="b13" data-key="bat-13"><label for="b13">13 · % of records location-resolvable to state/metro</label></li>
+        <li><input type="checkbox" id="b14" data-key="bat-14"><label for="b14">14 · Single-state lock: how much does monthly 70+ volume drop per vertical? (Decides if exclusivity is viable)</label></li>
+      </ul>
+      <div class="prog-row js-prog" data-for="bat-e"><div class="bar"><i></i></div><span class="pct"></span></div>
+    </div>
+    <div class="card" data-scope="bat-f">
+      <h3>F · Capacity ceiling <span class="mut">(→ C12)</span></h3>
+      <ul class="ck" style="margin-top:6px">
+        <li><input type="checkbox" id="b15" data-key="bat-15"><label for="b15">15 · Simultaneous operators one vertical can feed before the 70+ pool dilutes or repeats</label></li>
+        <li><input type="checkbox" id="b16" data-key="bat-16"><label for="b16">16 · Does the self-learning loop grow sustainable volume over the run — by how much?</label></li>
+      </ul>
+      <div class="prog-row js-prog" data-for="bat-f"><div class="bar"><i></i></div><span class="pct"></span></div>
+    </div>
+  </div>
+
+  <div class="callout risk" style="margin-top:16px">
+    <div class="ttl">OUT OF SCOPE FOR THIS PASS</div>
+    <p>Outreach → conversation conversion (A3, half of B6) needs real outreach and 90 days of tracking. A scrape run proves top-of-funnel volume and quality only — <b>do not over-claim conversion from scrape data.</b> The 90-day tracker starts with the first buyer-list batch at launch.</p>
+  </div>
+</section>
+
+<section id="siphon">
+  <div class="sec-head"><span class="k">TIER 3</span><h2>The Meta ads siphon — ultra-high intent</h2></div>
+  <div class="grid g2">
+    <div class="card">
+      <h3>The flow (to build in WS-1)</h3>
+      <p class="note">Meta ad → funnel → qualification form → <b>booking action</b> (call scheduled within ~2–3 days) → GHL automation tags the contact as Tier-3 inventory → routed to the buyer's pipeline (basic) or scheduled into their calendar (premium). Works hand-in-hand with the fresh-pixel architecture: DQ leads never touch the pixel <i>or</i> Tier-3 inventory.</p>
+      <p class="note" style="margin-top:10px">Dmytro's question from the ops call — "will buyers demand booked-appointment leads?" — is answered by the service levels: that IS the premium tier.</p>
+    </div>
+    <div class="card" data-scope="siphon">
+      <h3>Spec checklist (WS-7)</h3>
+      <ul class="ck" style="margin-top:6px">
+        <li><input type="checkbox" id="s1" data-key="sip-1"><label for="s1">Exact trigger list that promotes a lead to Tier 3 (+ disqualifiers)</label></li>
+        <li><input type="checkbox" id="s2" data-key="sip-2"><label for="s2">Tagging/automation design in GHL</label></li>
+        <li><input type="checkbox" id="s3" data-key="sip-3"><label for="s3">Freshness SLA — a call 2–3 days out is perishable; delivery near-instant</label></li>
+        <li><input type="checkbox" id="s4" data-key="sip-4"><label for="s4">Exclusivity rule (recommended: sold to exactly one buyer)</label></li>
+        <li><input type="checkbox" id="s5" data-key="sip-5"><label for="s5">Pricing vs Tier-2 sub-tiers and buyer alternatives</label></li>
+        <li><input type="checkbox" id="s6" data-key="sip-6"><label for="s6">Economics: CPL ÷ booking rate (needs A4 spend table)</label></li>
+      </ul>
+      <div class="prog-row js-prog" data-for="siphon"><div class="bar"><i></i></div><span class="pct"></span></div>
+    </div>
+  </div>
+</section>
+
+<section id="datamoon">
+  <div class="sec-head"><span class="k">TIER 1</span><h2>Data Moon — evaluation underway</h2></div>
+  <div class="grid g2">
+    <div class="card">
+      <h3>What we know</h3>
+      <ul style="padding-left:18px;display:grid;gap:7px;font-size:13.5px;color:var(--ink-2)">
+        <li>DaaS, the AudienceLab alternative — tracks behaviour ("back end of Google"), flags e.g. a search in the last 24h, grades leads</li>
+        <li>Sub-account per investor · Catalyst tier 25,000 credits/mo · top tier unlimited</li>
+        <li>We hold <b>8 white-label seats + unlimited data</b>; $100/mo per client after 8</li>
+        <li>Positioned as the cheapest tier; also the client's self-serve arbitrage source</li>
+      </ul>
+      <div class="callout warn" style="margin-top:14px">
+        <div class="ttl">WHY IT MIGHT NOT SURVIVE</div>
+        <p>Jerome's team cold-called a few records and "didn't get very far." Taylor's history with the category: stitched behaviour = professional tire-kickers. Fallback if it fails: <b>cheap Meta leads become the budget tier</b> — higher intent anyway.</p>
+      </div>
+    </div>
+    <div class="card" data-scope="dmoon">
+      <h3>Evaluation protocol (D15) — data, not anecdote</h3>
+      <ul class="ck" style="margin-top:6px">
+        <li><input type="checkbox" id="d1" data-key="dm-1"><label for="d1">1 · Pull a structured sample per launch vertical (100–200 records × 3 verticals)</label></li>
+        <li><input type="checkbox" id="d2" data-key="dm-2"><label for="d2">2 · Measure: % contactable, % ICP-matching, freshness, duplication vs LeadHunter</label></li>
+        <li><input type="checkbox" id="d3" data-key="dm-3"><label for="d3">3 · Intent test: setter cold-calls a randomised subset, fixed script, vs a LeadHunter 70+ control batch</label></li>
+        <li><input type="checkbox" id="d4" data-key="dm-4"><label for="d4">4 · Cost per usable record (credits ÷ usable) vs cheap Meta CPL</label></li>
+        <li><input type="checkbox" id="d5" data-key="dm-5"><label for="d5">5 · Decision gate: stays as Tier 1 only if cost AND in-market rate beat the Meta fallback — else it's the investors' data perk, not our resale tier</label></li>
+        <li><input type="checkbox" id="d6" data-key="dm-6"><label for="d6">6 · Define Data Moon sub-grades (only if it passes)</label></li>
+      </ul>
+      <div class="prog-row js-prog" data-for="dmoon"><div class="bar"><i></i></div><span class="pct"></span></div>
+    </div>
+  </div>
+</section>
+
+<section id="crosstier">
+  <div class="sec-head"><span class="k">CROSS-TIER</span><h2>Delivery, pricing &amp; dependencies</h2></div>
+  <div class="grid g2">
+    <div class="card">
+      <h3>Service levels &amp; routing</h3>
+      <p class="note"><b>Basic:</b> hard-rule qualification against buyer parameters → instant delivery to buyer pipeline + their own system. SLA: minutes.<br><b>Premium:</b> qualification <b>+ appointment scheduling</b> (human setter until compliance clears AI) → delivered at "scheduled" stage, priced higher.<br><b>Routing:</b> round-robin across active matching buyers; the active/inactive kill-switch stops routing instantly.</p>
+    </div>
+    <div class="card">
+      <h3>Dependency notes</h3>
+      <ul style="padding-left:18px;display:grid;gap:7px;font-size:13.5px;color:var(--ink-2)">
+        <li><b>Territory (D1)</b> changes every per-vertical number — decide before locking any table</li>
+        <li>The <b>A4 spend table</b> ($1k/$2.5k/$5k CPL) is Meta-campaign data, not LeadHunter — it needs the fresh pixel live</li>
+        <li><b>Compliance (D13)</b> can delete the AI option from premium scheduling — price premium assuming a human until proven otherwise</li>
+      </ul>
+    </div>
+  </div>
+  <h3 style="margin-top:24px">Pricing framework (deliver to Will)</h3>
+  <div class="tbl-wrap"><table class="tbl">
+    <thead><tr><th>Tier</th><th>Cost basis</th><th>Price logic</th><th>Guarantee usage</th></tr></thead>
+    <tbody>
+      <tr><td><span class="chip blue"><span class="dot blue"></span>1 · Data Moon</span></td><td>Credits per usable record</td><td>Cheapest; volume plays; arbitrage-friendly</td><td>None</td></tr>
+      <tr><td><span class="chip acc"><span class="dot acc"></span>2 · LeadHunter ×3</span></td><td>All-in cost per 70+/80+ record</td><td>Mid–high; per-vertical pricing</td><td>Backbone of 50-buyers / 15-conversations</td></tr>
+      <tr><td><span class="chip copper"><span class="dot copper"></span>3 · Meta siphon</span></td><td>CPL ÷ booking rate</td><td>Top price; exclusivity premium; premium-service upsell</td><td>First-deal / first-buyer promises</td></tr>
+    </tbody>
+  </table></div>
+</section>
+
+<section id="ledger">
+  <div class="sec-head"><span class="k">LEDGER</span><h2>Open research items</h2></div>
+  <div class="tbl-wrap"><table class="tbl">
+    <thead><tr><th>#</th><th>Item</th><th>Feeds</th><th>Status</th></tr></thead>
+    <tbody>
+      <tr><td>R1</td><td>Run the Codex live battery (above)</td><td>A1–A3, C12, 0.1–0.3, D1 maths</td><td><span class="chip ok"><span class="dot ok"></span>ready to hand off</span></td></tr>
+      <tr><td>R2</td><td>Map LeadHunter's 3 sub-tiers + unit costs</td><td>WS-7 pricing</td><td><span class="chip"><span class="dot mut"></span>not started</span></td></tr>
+      <tr><td>R3</td><td>Produce the 91% / pipeline substantiation file</td><td>A5</td><td><span class="chip"><span class="dot mut"></span>not started</span></td></tr>
+      <tr><td>R4</td><td>Data Moon structured evaluation</td><td>D15 · Tier-1 go/no-go</td><td><span class="chip warn"><span class="dot warn"></span>access received — starting</span></td></tr>
+      <tr><td>R5</td><td>Tier-3 trigger list + tagging + SLA</td><td>WS-7 · WS-1 build</td><td><span class="chip"><span class="dot mut"></span>not started</span></td></tr>
+      <tr><td>R6</td><td>CPL-by-vertical spend table ($1k/$2.5k/$5k)</td><td>A4 · Tier-3 economics</td><td><span class="chip warn"><span class="dot warn"></span>needs fresh-pixel data</span></td></tr>
+      <tr><td>R7</td><td>90-day outreach→conversation tracker design</td><td>A3 · B6</td><td><span class="chip"><span class="dot mut"></span>design now, runs post-launch</span></td></tr>
+      <tr><td>R8</td><td>Written intent-criteria sheet</td><td>B7 · guarantee standard</td><td><span class="chip"><span class="dot mut"></span>drafts from battery D</span></td></tr>
+    </tbody>
+  </table></div>
+  <div class="meta-chips" style="margin-top:16px">
+    <a class="btn" href="../downloads/LeadTiers_Research_2026-07-15.md" download>Download research doc (.md)</a>
+    <a class="btn ghost" href="../spec/#questions">Open the question bank →</a>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <span><b>REPUBLIC</b> · Lead Tiers Research</span>
+    <span>Prepared by Taylor Cunningham · ScaleLogix AI</span>
+    <span>15 July 2026</span>
+    <span class="mut"><a href="../">← Command Center hub</a></span>
+  </div>
+</footer>
+
+<script src="../assets/app.js"></script>
+</body>
+</html>

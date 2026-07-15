@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Go-Live Plan — Republic Lead Gen</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%2310141d'/%3E%3Ctext x='32' y='45' font-family='Arial' font-weight='900' font-size='36' fill='%238b6cd6' text-anchor='middle'%3ER%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body data-page="plan">
+
+<header class="topbar">
+  <div class="topbar-in">
+    <a class="wordmark" href="../"><b><span>REPUBLIC</span></b><small>Command Center</small></a>
+    <nav class="topnav" aria-label="Dashboards">
+      <a href="../">Hub</a>
+      <a href="../spec/">Master Spec</a>
+      <a href="../research/">Lead Tiers</a>
+      <a href="./" aria-current="page">Go-Live Plan</a>
+    </nav>
+    <div class="pageprog js-pageprog"><span>My progress</span><div class="bar"><i></i></div><span class="pct">0/0</span></div>
+  </div>
+</header>
+
+<div class="hero">
+  <div class="wrap">
+    <div class="crumb">Go-Live Implementation Plan · phased, gated, owned</div>
+    <h1>Sales start when the gates pass — not when the calendar says so.</h1>
+    <p class="lede">Nominal start ~Mon 20 July (soft — Jerome: "seems a little early"). The real rule: sales can start when the Ryan &amp; Cole answers exist and fulfilment can absorb 18-deals-in-a-week without Taylor becoming the bottleneck.</p>
+    <div class="meta-chips">
+      <span class="chip warn"><span class="dot warn"></span>Date is SOFT — six gates decide</span>
+      <span class="chip acc"><span class="dot acc"></span>First deal expected within week one of ads</span>
+      <button class="fbtn js-reset" type="button" style="margin-left:auto">Reset my progress</button>
+    </div>
+  </div>
+</div>
+
+<nav class="subnav" aria-label="Sections">
+  <div class="subnav-in">
+    <a href="#timeline">Timeline</a><a href="#p0">Phase 0 · Prove</a><a href="#p1">Phase 1 · Build</a><a href="#p2">Phase 2 · Gates &amp; launch</a><a href="#p3">Phase 3 · Scale</a><a href="#risks">Risk register</a><a href="#owners">Owners</a>
+  </div>
+</nav>
+
+<main class="wrap">
+
+<section id="timeline">
+  <div class="sec-head"><span class="k">ROADMAP</span><h2>Four phases</h2></div>
+  <div class="phases">
+    <div class="phase-node"><div class="ph">PHASE 0</div><h3>Decisions &amp; proof</h3><div class="dt">Now → ~Thu 17 Jul</div><p class="note" style="margin-top:8px">Territory call, Codex battery, Data Moon eval, Scott break-test, compliance map. Facts before anything downstream.</p></div>
+    <div class="phase-node"><div class="ph">PHASE 1</div><h3>Build</h3><div class="dt">~Thu 17 → Tue 22 Jul</div><p class="note" style="margin-top:8px">Fresh pixel + funnels, GHL client template, sales answer pack, CRO rebuild. Starts as Phase-0 facts arrive.</p></div>
+    <div class="phase-node"><div class="ph">PHASE 2</div><h3>Gates &amp; go-live</h3><div class="dt">~Wed 23 Jul or when gates pass</div><p class="note" style="margin-top:8px">Six go/no-go gates, then launch week with an all-hands first client and daily standups.</p></div>
+    <div class="phase-node"><div class="ph">PHASE 3</div><h3>Scale</h3><div class="dt">Post-launch →</div><p class="note" style="margin-top:8px">Absorb the spike, execute the Lead Distro decision, speed-to-lead rollout, march to 500–1,000 clients.</p></div>
+  </div>
+  <div class="rail" aria-hidden="true"></div>
+</section>
+
+<section id="p0">
+  <div class="sec-head"><span class="k">PHASE 0</span><h2>Decisions &amp; proof <span class="mut" style="font-size:13px">· now → ~Thu 17</span></h2></div>
+  <div class="card" data-scope="p0">
+    <ul class="ck">
+      <li><input type="checkbox" id="p01" data-key="p0-1"><label for="p01"><b>0.1 Decide territory model (D1)</b> — locked vs open, per vertical; written rule<span class="who">TAYLOR → WILL</span></label></li>
+      <li><input type="checkbox" id="p02" data-key="p0-2"><label for="p02"><b>0.2 Kick off the Codex LeadHunter battery</b> across candidate launch verticals<span class="who">TAYLOR → CODEX</span></label></li>
+      <li><input type="checkbox" id="p03" data-key="p0-3"><label for="p03"><b>0.3 Data Moon structured evaluation</b> — Tier-1 go/no-go with data<span class="who">TAYLOR</span></label></li>
+      <li><input type="checkbox" id="p04" data-key="p0-4"><label for="p04"><b>0.4 Break-test Scott's demo</b> — voice, inbound-only claim, install, economics<span class="who">DAVID</span></label></li>
+      <li><input type="checkbox" id="p05" data-key="p0-5"><label for="p05"><b>0.5 Compliance map for outbound AI</b> — GHL/Twilio approval path, state disclosure laws, vertical regs → per-industry allowed/human-only/avoid table<span class="who">DAVID + TAYLOR</span></label></li>
+      <li><input type="checkbox" id="p06" data-key="p0-6"><label for="p06"><b>0.6 Lead Distro vs in-house review</b> — adopt / replicate / drop recommendation<span class="who">DAVID</span></label></li>
+      <li><input type="checkbox" id="p07" data-key="p0-7"><label for="p07"><b>0.7 Collect inputs</b> — guarantee stack, offer overview, Dmytro's notes, Figma samples, ICP docs — all in shared drive<span class="who">ALL</span></label></li>
+      <li><input type="checkbox" id="p08" data-key="p0-8"><label for="p08"><b>0.8 Choose launch verticals (D18)</b> — 3–5 named, each passing compliance + capacity<span class="who">TEAM</span></label></li>
+      <li><input type="checkbox" id="p09" data-key="p0-9"><label for="p09"><b>0.9 URGENT parallel — ScaleLogix landing crisis:</b> ICP docs to Dmytro same-day, per-ICP template drafted, David reviews, spend off the trust-free pages<span class="who">TAYLOR + DMYTRO + DAVID</span></label></li>
+    </ul>
+    <div class="prog-row js-prog" data-for="p0"><div class="bar"><i></i></div><span class="pct"></span></div>
+  </div>
+</section>
+
+<section id="p1">
+  <div class="sec-head"><span class="k">PHASE 1</span><h2>Build <span class="mut" style="font-size:13px">· ~Thu 17 → Tue 22 · starts as facts arrive</span></h2></div>
+  <div class="grid g2">
+    <div class="card" data-scope="p1a">
+      <h3>1A · Marketing engine <span class="who">TAYLOR</span></h3>
+      <ul class="ck" style="margin-top:6px">
+        <li><input type="checkbox" id="pa1" data-key="p1a-1"><label for="pa1">New Meta pixel (B2C first)</label></li>
+        <li><input type="checkbox" id="pa2" data-key="p1a-2"><label for="pa2">Zapier architecture — DQ never reaches the pixel; no pixel on DQ pages</label></li>
+        <li><input type="checkbox" id="pa3" data-key="p1a-3"><label for="pa3">Ads + messaging + qualifying form rebuilt (hard-headed application framing)</label></li>
+        <li><input type="checkbox" id="pa4" data-key="p1a-4"><label for="pa4">Budget routing in intake ($10–20k / &lt;$20k / $25k+ tagging)</label></li>
+        <li><input type="checkbox" id="pa5" data-key="p1a-5"><label for="pa5">~80/20 launch structure; funnel + spinoff decision (D4)</label></li>
+        <li><input type="checkbox" id="pa6" data-key="p1a-6"><label for="pa6">Tier-3 siphon tagging live from day one</label></li>
+      </ul>
+      <div class="prog-row js-prog" data-for="p1a"><div class="bar"><i></i></div><span class="pct"></span></div>
+    </div>
+    <div class="card" data-scope="p1b">
+      <h3>1B · Fulfilment engine <span class="who">DMYTRO + TAYLOR</span></h3>
+      <ul class="ck" style="margin-top:6px">
+        <li><input type="checkbox" id="pb1" data-key="p1b-1"><label for="pb1">GHL client template: B2B half (buyer funnels, pipeline, invoicing, dashboards)</label></li>
+        <li><input type="checkbox" id="pb2" data-key="p1b-2"><label for="pb2">B2C half (lead funnels, hard-rule qualification, minutes-level SLA)</label></li>
+        <li><input type="checkbox" id="pb3" data-key="p1b-3"><label for="pb3">Round-robin routing + buyer active/inactive kill-switch</label></li>
+        <li><input type="checkbox" id="pb4" data-key="p1b-4"><label for="pb4">Delivery into buyer systems (GHL-native first; Housecall-Pro-style as needed)</label></li>
+        <li><input type="checkbox" id="pb5" data-key="p1b-5"><label for="pb5">Basic + premium service levels (human setter until D13 clears AI)</label></li>
+        <li><input type="checkbox" id="pb6" data-key="p1b-6"><label for="pb6">Demo + break-test with fake buyers/leads before any real client</label></li>
+      </ul>
+      <div class="prog-row js-prog" data-for="p1b"><div class="bar"><i></i></div><span class="pct"></span></div>
+    </div>
+    <div class="card" data-scope="p1c">
+      <h3>1C · Sales enablement <span class="who">TAYLOR → WILL / RYAN / COLE</span></h3>
+      <ul class="ck" style="margin-top:6px">
+        <li><input type="checkbox" id="pc1" data-key="p1c-1"><label for="pc1">Ryan &amp; Cole answer pack: supply floor, buyer capacity, spend table, worst-quartile guarantees, speed-to-lead position</label></li>
+        <li><input type="checkbox" id="pc2" data-key="p1c-2"><label for="pc2">Intent-criteria sheet (B7) + 91%/pipeline substantiation file (A5) — or corrected stats</label></li>
+        <li><input type="checkbox" id="pc3" data-key="p1c-3"><label for="pc3">Tier pricing sheet → Will (3 tiers + sub-tiers + service levels)</label></li>
+      </ul>
+      <div class="prog-row js-prog" data-for="p1c"><div class="bar"><i></i></div><span class="pct"></span></div>
+    </div>
+    <div class="card" data-scope="p1d">
+      <h3>1D · ScaleLogix CRO rebuild <span class="who">DMYTRO + TAYLOR + DAVID</span></h3>
+      <ul class="ck" style="margin-top:6px">
+        <li><input type="checkbox" id="pd1" data-key="p1d-1"><label for="pd1">Template → one page per ICP, 2–3 split-test variants, rolled across sub-accounts</label></li>
+        <li><input type="checkbox" id="pd2" data-key="p1d-2"><label for="pd2">Every page verified wired into a pipeline (the Hina failure can't recur)</label></li>
+        <li><input type="checkbox" id="pd3" data-key="p1d-3"><label for="pd3">Ownership decision (D9): who runs the pages now</label></li>
+      </ul>
+      <div class="prog-row js-prog" data-for="p1d"><div class="bar"><i></i></div><span class="pct"></span></div>
+    </div>
+  </div>
+</section>
+
+<section id="p2">
+  <div class="sec-head"><span class="k">PHASE 2</span><h2>The six go/no-go gates</h2></div>
+  <p class="note mut" style="margin-bottom:14px"><b>ALL six must pass before Ryan &amp; Cole's ads spend a dollar.</b> A checked gate means evidenced, not hoped.</p>
+  <div class="grid g2" data-scope="gates">
+    <div class="gate"><input type="checkbox" id="g1" data-key="gate-1"><label for="g1"><b>Answer pack delivered &amp; acknowledged</b> — Ryan &amp; Cole green-light their marketing off it</label></div>
+    <div class="gate"><input type="checkbox" id="g2" data-key="gate-2"><label for="g2"><b>GHL client template survived break-testing</b> — fake buyers/leads ran the whole rail</label></div>
+    <div class="gate"><input type="checkbox" id="g3" data-key="gate-3"><label for="g3"><b>Guarantees restated at supported levels</b> — worst-quartile data, no smoke</label></div>
+    <div class="gate"><input type="checkbox" id="g4" data-key="gate-4"><label for="g4"><b>Launch verticals named &amp; compliance-cleared</b> — 3–5, each through the D13 map</label></div>
+    <div class="gate"><input type="checkbox" id="g5" data-key="gate-5"><label for="g5"><b>Speed-to-lead answer exists per vertical</b> — Scott / human / hybrid, tested</label></div>
+    <div class="gate"><input type="checkbox" id="g6" data-key="gate-6"><label for="g6"><b>New pixel live with DQ exclusion verified end-to-end</b> — test lead through every route</label></div>
+  </div>
+  <div class="prog-row js-prog" data-for="gates" style="max-width:420px"><div class="bar"><i></i></div><span class="pct"></span></div>
+
+  <div class="card" style="margin-top:20px" data-scope="launchweek">
+    <h3>Launch week</h3>
+    <ul class="ck" style="margin-top:6px">
+      <li><input type="checkbox" id="lw1" data-key="lw-1"><label for="lw1">Ryan &amp; Cole ads live (Fri/Mon); internal funnel in parallel</label></li>
+      <li><input type="checkbox" id="lw2" data-key="lw-2"><label for="lw2"><b>First-client all-hands</b> — the whole team swarms onboarding, iterates the template on a real client</label></li>
+      <li><input type="checkbox" id="lw3" data-key="lw-3"><label for="lw3">Daily standup: opt-in→booked-call rate · DQ leakage (must be ZERO) · qualification SLA (minutes) · routing correctness</label></li>
+      <li><input type="checkbox" id="lw4" data-key="lw-4"><label for="lw4">Start the 90-day outreach conversion tracker from the first buyer-list batch</label></li>
+    </ul>
+    <div class="prog-row js-prog" data-for="launchweek"><div class="bar"><i></i></div><span class="pct"></span></div>
+  </div>
+</section>
+
+<section id="p3">
+  <div class="sec-head"><span class="k">PHASE 3</span><h2>Scale — post-launch to 500–1,000 clients</h2></div>
+  <div class="card" data-scope="p3">
+    <ul class="ck">
+      <li><input type="checkbox" id="p31" data-key="p3-1"><label for="p31">Absorb the spike: deals/week vs onboarding throughput watched; Dmytro's automation backlog prioritised by whatever manual step hurts most</label></li>
+      <li><input type="checkbox" id="p32" data-key="p3-2"><label for="p32">Lead Distro decision executed (adopt or Clark-built replacement); migrate routing if replacing</label></li>
+      <li><input type="checkbox" id="p33" data-key="p3-3"><label for="p33">Speed-to-lead rollout as a standard per-client install (+ resale margin)</label></li>
+      <li><input type="checkbox" id="p34" data-key="p3-4"><label for="p34">Circle course module additions → clients autonomous by month 12 → SaaS-fee tail</label></li>
+      <li><input type="checkbox" id="p35" data-key="p3-5"><label for="p35">Per-vertical capacity re-test (same battery) before opening each new vertical; publish the "verticals we can honestly sell" list</label></li>
+      <li><input type="checkbox" id="p36" data-key="p3-6"><label for="p36">Quarterly guarantee audit: actuals vs promised — adjust guarantees before they adjust us</label></li>
+    </ul>
+    <div class="prog-row js-prog" data-for="p3"><div class="bar"><i></i></div><span class="pct"></span></div>
+  </div>
+</section>
+
+<section id="risks">
+  <div class="sec-head"><span class="k">RISKS</span><h2>The register — everything here has already bitten once</h2></div>
+  <div class="tbl-wrap"><table class="tbl">
+    <thead><tr><th>Risk</th><th>Signal we watch</th><th>Mitigation</th></tr></thead>
+    <tbody>
+      <tr><td><span class="chip risk"><span class="dot risk"></span>Sales outruns fulfilment</span></td><td>Deals/week vs onboarding throughput (March: 18 deals → 2 months buried)</td><td>Template automation pre-launch; Larissa ramped; capacity ceilings published to sales</td></tr>
+      <tr><td><span class="chip risk"><span class="dot risk"></span>Compliance kills premium tier</span></td><td>GHL/Twilio approval stalls; state AI-disclosure law</td><td>Human setters as default premium mechanism until D13 clears</td></tr>
+      <tr><td><span class="chip warn"><span class="dot warn"></span>Data Moon fails eval</span></td><td>D15 evaluation gate</td><td>Fallback ready: cheap Meta leads as the budget tier</td></tr>
+      <tr><td><span class="chip warn"><span class="dot warn"></span>Optimistic guarantees</span></td><td>Codex battery + 90-day tracker vs promises</td><td>Worst-quartile setting; push 90-day window to 6 months (Will already open)</td></tr>
+      <tr><td><span class="chip risk"><span class="dot risk"></span>Pixel poisoning recurs</span></td><td>ANY DQ event reaching Meta</td><td>Zero-tolerance architecture + weekly audit</td></tr>
+      <tr><td><span class="chip warn"><span class="dot warn"></span>Single-closer dependency</span></td><td>Ro's decision this week</td><td>Retention package; Larissa backup setter; hiring pipeline</td></tr>
+      <tr><td><span class="chip warn"><span class="dot warn"></span>Landing-page regression</span></td><td>Any page cloned without wiring (the Hina scenario)</td><td>Template + wiring checklist; nothing ships unverified</td></tr>
+      <tr><td><span class="chip warn"><span class="dot warn"></span>Taylor bottleneck</span></td><td>Taylor on the critical path of &gt;1 workstream</td><td>Dmytro owns fulfilment build; Codex runs the battery; David owns compliance/tools</td></tr>
+    </tbody>
+  </table></div>
+</section>
+
+<section id="owners">
+  <div class="sec-head"><span class="k">RACI</span><h2>Who owns what</h2></div>
+  <div class="card">
+    <div class="owners">
+      <div class="row"><b>Taylor</b><span>Marketing engine · LeadHunter battery + tier pricing · Data Moon verdict · Ryan &amp; Cole pack · ICP docs to Dmytro</span></div>
+      <div class="row"><b>Dmytro</b><span>GHL ops template build + demo · landing-page template · ops notes doc</span></div>
+      <div class="row"><b>David</b><span>Scott break-test · compliance map · Lead Distro review · CRO structure review · sales-side readiness</span></div>
+      <div class="row"><b>Jerome</b><span>Access distribution (Lead Distro, Scott demo, offer overview) · recordings to Will</span></div>
+      <div class="row"><b>Will</b><span>Guarantee stack · pricing ratification · sales team management · Scott commercial terms</span></div>
+      <div class="row"><b>Codex</b><span>LeadHunter multi-vertical live test battery (config in <a href="../research/#battery">Lead Tiers → battery</a>)</span></div>
+    </div>
+    <div class="meta-chips" style="margin-top:16px">
+      <a class="btn" href="../downloads/Republic_GoLive_Plan_2026-07-15.md" download>Download go-live plan (.md)</a>
+      <a class="btn ghost" href="../spec/">Open the master spec →</a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <span><b>REPUBLIC</b> · Go-Live Plan</span>
+    <span>Prepared by Taylor Cunningham · ScaleLogix AI</span>
+    <span>15 July 2026</span>
+    <span class="mut"><a href="../">← Command Center hub</a></span>
+  </div>
+</footer>
+
+<script src="../assets/app.js"></script>
+</body>
+</html>
