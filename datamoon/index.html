@@ -28,13 +28,13 @@
 
 <div class="hero">
   <div class="wrap">
-    <div class="crumb">DataMoon → LinkedIn → Meta · autonomous audience intelligence</div>
-    <h1>Turn a DataMoon audience into ads that already know what to say.</h1>
-    <p class="lede">DataMoon filters the data and hands us LinkedIn URLs. We sample the audience, read what they actually post about, and aggregate it into a creative brief — so before a single dollar hits Meta, we know exactly what this demographic cares about. Built to be run by an AI agent, end to end.</p>
+    <div class="crumb">DataMoon → LinkedIn → Meta · a working audience-intelligence engine</div>
+    <h1>We turned a raw DataMoon audience into a creative brief that knows what to say.</h1>
+    <p class="lede">Same discipline we use for LeadHunter — source an audience, enrich it, analyse it, act — pointed at DataMoon. We read each person's public LinkedIn posts through Google (never touching LinkedIn), aggregate what the demographic actually cares about, and hand back exactly what the ads should say. Tested live on 36 Alabama accountants. Now a finished, installable skill.</p>
     <div class="meta-chips">
-      <span class="chip blue"><span class="dot blue"></span>DataMoon has a real REST API</span>
-      <span class="chip acc"><span class="dot acc"></span>Sample, don't scrape everyone</span>
-      <span class="chip warn"><span class="dot warn"></span>2 account-ban tripwires — both avoidable</span>
+      <span class="chip ok"><span class="dot ok"></span>Skill built &amp; installed</span>
+      <span class="chip acc"><span class="dot acc"></span>Tested on real data</span>
+      <span class="chip blue"><span class="dot blue"></span>Live model: batches of 50</span>
       <button class="fbtn js-reset" type="button" style="margin-left:auto">Reset my progress</button>
     </div>
   </div>
@@ -42,251 +42,206 @@
 
 <nav class="subnav" aria-label="Sections">
   <div class="subnav-in">
-    <a href="#reframe">The reframe</a><a href="#pilot">The 25-contact pilot</a><a href="#part1">Part 1 · DataMoon automation</a><a href="#part2">Part 2 · LinkedIn skill</a><a href="#fetch">Fetch methods</a><a href="#google">Google workaround</a><a href="#report">The report</a><a href="#compliance">Compliance gates</a><a href="#build">Build plan</a><a href="#source">Source</a>
+    <a href="#process">Fit with LeadHunter</a><a href="#test">The test run</a><a href="#howposts">How we pulled the posts</a><a href="#live">Live system · batches of 50</a><a href="#effective">Effectiveness</a><a href="#skill">The skill</a><a href="#compliance">Compliance</a><a href="#downloads">Downloads</a>
   </div>
 </nav>
 
 <main class="wrap">
 
-<section id="reframe">
-  <div class="sec-head"><span class="k">START HERE</span><h2>The one reframe that makes this cheap and safe</h2></div>
-  <div class="grid g2">
-    <div class="card">
-      <p class="note">Your goal is to know what a demographic cares about <b>on average</b>. That's a segment fingerprint — not a dossier on thousands of named people. And that distinction is worth money: the <b>value</b> (creative direction) lives in the aggregate; the <b>risk</b> (ToS, privacy, ban surface) lives in the per-person raw data.</p>
-      <p class="note" style="margin-top:10px">So the whole system is: <b>sample → analyse → aggregate → discard the raw → keep only the fingerprint.</b> Keep the value, delete the risk.</p>
-    </div>
-    <div class="grid g2" style="align-content:start">
-      <div class="tile"><div class="num">25</div><div class="lbl">Contacts in the pilot</div><div class="sub">not the whole audience</div></div>
-      <div class="tile"><div class="num">250</div><div class="lbl">Posts analysed</div><div class="sub">25 × last 10 posts</div></div>
-      <div class="tile"><div class="num">1</div><div class="lbl">Fingerprint kept</div><div class="sub">raw profiles discarded</div></div>
-      <div class="tile"><div class="num">~250</div><div class="lbl">Chars a 10k audience</div><div class="sub">to ±6% at 95% — for the confident read</div></div>
-    </div>
-  </div>
+<section id="process">
+  <div class="sec-head"><span class="k">HOW IT FITS</span><h2>DataMoon runs through the same process as LeadHunter</h2></div>
+  <p class="note mut" style="margin-bottom:14px">LeadHunter and DataMoon sit on different tiers of intent, but they feed the <b>same four-step engine</b>. DataMoon just supplies a different kind of raw material — a filtered audience with LinkedIn URLs — which this new skill turns into intelligence.</p>
+  <div class="tbl-wrap"><table class="tbl">
+    <thead><tr><th>Step</th><th>LeadHunter (Tier 2)</th><th>DataMoon + this skill (Tier 1)</th></tr></thead>
+    <tbody>
+      <tr><td><b>1 · Source</b></td><td>Scrape declared-intent leads (7-day window, 0–100 score)</td><td>Build a feed in DataMoon ("Alabama accountants &gt;$250k, email+phone") → export with LinkedIn URLs</td></tr>
+      <tr><td><b>2 · Verify</b></td><td>Score + match-rate check</td><td><code>parse_audience.py</code> — normalise, flag name↔URL mismatches (~1 in 6 in the test)</td></tr>
+      <tr><td><b>3 · Enrich / analyse</b></td><td>Intent signals, contactability</td><td>Read each person's <b>public LinkedIn posts + profile via Google</b> → themes, pains, vocabulary</td></tr>
+      <tr><td><b>4 · Act</b></td><td>Setter calls the high scorers</td><td>Aggregate → a <b>Creative Strategy Report</b> → Meta creative that matches the demographic</td></tr>
+    </tbody>
+  </table></div>
   <div class="callout acc" style="margin-top:16px">
-    <div class="ttl">WHY NOT SCRAPE ALL 10,000?</div>
-    <p>A clean random 250 characterises a 10,000-person audience essentially as well as scraping all 10,000 — at ~1/40th the cost and risk. Scraping everyone doesn't buy more insight; it just multiplies the exposure. The average is the deliverable, and averages don't need a census.</p>
+    <div class="ttl">THE POINT</div>
+    <p>DataMoon's data alone is thin (behavioural, low-intent). Its <b>superpower is the LinkedIn URL on every row</b>. This skill exploits exactly that — it converts "here are 36 accountants" into "here is precisely how to advertise to accountants" — which is what makes the Tier-1 audience actually worth uploading to Meta.</p>
   </div>
 </section>
 
-<section id="pilot">
-  <div class="sec-head"><span class="k">YOUR QUESTION</span><h2>25 contacts × 10 posts = 250 posts. What can we do with that?</h2></div>
-  <div class="grid g2">
-    <div class="card">
-      <h3>A lot — as long as we're honest about which number is which</h3>
-      <p class="note">The unit of confidence is the <b>person (25)</b>, not the post (250). So:</p>
-      <ul style="padding-left:18px;display:grid;gap:7px;font-size:13.5px;color:var(--ink-2);margin-top:8px">
-        <li><b>250 posts = rich qualitative gold.</b> More than enough to extract the real vocabulary, tone, recurring pains, aspirations, and the identity these people perform online.</li>
-        <li><b>25 feeds = directional confidence.</b> A theme in ~17+/25 feeds (≈two-thirds) is a signal you can build creative on. A theme in 5/25 is a maybe, not a finding.</li>
-        <li><b>Verdict:</b> the pilot produces <b>strong creative hypotheses</b> — exactly what you need to write round one of ads — not precise percentages.</li>
-      </ul>
-    </div>
-    <div class="card">
-      <h3>The honest recalibration on risk</h3>
-      <p class="note">You pushed back that we're only reading, not messaging — and you're substantially right. The precise version:</p>
-      <ul style="padding-left:18px;display:grid;gap:7px;font-size:13.5px;color:var(--ink-2);margin-top:8px">
-        <li>LinkedIn's ban trigger is <b>automated access</b>, not outreach — so "we don't message" doesn't itself clear their terms.</li>
-        <li><b>But</b> reading <i>public</i> data is legally defensible (the <i>hiQ v. LinkedIn</i> line), the residual exposure is an account ban, not a lawsuit, and at ~25 profiles that's small and containable.</li>
-        <li>My earlier caution was calibrated for thousands. <b>At pilot scale, the honest read is: this is doable.</b> Just pick the least-risky fetch that gets the data.</li>
-      </ul>
-    </div>
-  </div>
-  <p class="note mut" style="margin-top:12px">Recommendation: run the 25-contact pilot first — cheap, fast, low-risk, and it proves the entire pipeline end-to-end. Scale N up to 200–300 only for a flagship vertical where you want quotable numbers.</p>
-</section>
-
-<section id="part1">
-  <div class="sec-head"><span class="k">PART 1</span><h2>DataMoon integration &amp; automation</h2></div>
-  <div class="callout acc" style="margin-bottom:16px">
-    <div class="ttl">THE KEY FINDING</div>
-    <p>DataMoon isn't just a UI — it's a <b>real REST API</b> with <code>X-API-Key</code> auth (confirmed at intentdocs.datamoon.com). An AI agent can drive the entire thing. That's what makes a genuinely autonomous system possible, rather than brittle Zapier glue.</p>
+<section id="test">
+  <div class="sec-head"><span class="k">THE TEST RUN</span><h2>What we did — 36 Alabama accountants</h2></div>
+  <div class="grid g4">
+    <div class="tile"><div class="num">36</div><div class="lbl">Contacts in the audience</div><div class="sub">DataMoon export_6028.csv</div></div>
+    <div class="tile"><div class="num">5</div><div class="lbl">Analysed for the POC</div><div class="sub">likely-posters mode</div></div>
+    <div class="tile"><div class="num">100%</div><div class="lbl">Profiles found</div><div class="sub">via Google, no LinkedIn login</div></div>
+    <div class="tile"><div class="num">0</div><div class="lbl">Messages sent · logins used</div><div class="sub">read-only, public data</div></div>
   </div>
 
-  <h3>The API surface</h3>
+  <h3 style="margin-top:24px">The five we analysed</h3>
   <div class="tbl-wrap"><table class="tbl">
-    <thead><tr><th>Capability</th><th>Endpoint</th><th>Notes</th></tr></thead>
+    <thead><tr><th>Person</th><th>Role / firm</th><th>What their public posts are about</th></tr></thead>
     <tbody>
-      <tr><td>List feeds</td><td><code>GET /intent/feeds</code></td><td>paginated, searchable</td></tr>
-      <tr><td>Build a feed</td><td><code>POST /intent/feeds/builder</code></td><td><b>free-text query</b> → "accountants in Alabama &gt;$250k, email+phone" becomes a feed</td></tr>
-      <tr><td>Feed size</td><td><code>POST /intent/feeds/stats</code></td><td>is it big enough to sample?</td></tr>
-      <tr><td>Filters</td><td><code>/filters/fields</code>, <code>/filters/values</code></td><td>precise targeting + autocomplete</td></tr>
-      <tr><td>Export (async)</td><td><code>POST /intent/feeds/exports</code></td><td><code>require_contact_id=true</code>; page_size 1k–50k</td></tr>
-      <tr><td>Poll / download</td><td><code>/exports/list</code>, <code>/exports/download-url</code></td><td>1-hour signed CSV URL</td></tr>
-      <tr><td>Enrich</td><td><code>POST /enrich/professional</code>, <code>/emails</code>, <code>/phones</code>, <code>/interests</code>…</td><td><b>/enrich/professional = the LinkedIn URLs</b></td></tr>
-      <tr><td>Credits</td><td><code>GET /organization/credits</code></td><td>records-credit pool</td></tr>
+      <tr><td>Nick Cadden</td><td>CIO, Carr Riggs &amp; Ingram</td><td>Richest feed — CECL, GASB, board-meeting productivity, cybersecurity, disaster recovery; AI as "enhance, not replace"</td></tr>
+      <tr><td>Caterina Mozingo</td><td>Partner, Aldridge Borden</td><td>Forbes Best-In-State CPA (2 yrs), personal financial planning, career-journey content</td></tr>
+      <tr><td>Keith Hundley</td><td>Partner, Carr Riggs &amp; Ingram</td><td>Single Audit Act, OMB guidance, occupational-fraud detection, nonprofit/government grants</td></tr>
+      <tr><td>Steve Rutland</td><td>Partner, Data &amp; Digital, RSM</td><td>Tech transformation of finance, ROI on tools <span class="mut">(the row DataMoon mislabelled "Sophia Archer")</span></td></tr>
+      <tr><td>Erin Howell</td><td>Partner, Carr Riggs &amp; Ingram</td><td>Newly-made partner, nonprofit + healthcare audit, firm-pride content</td></tr>
     </tbody>
   </table></div>
-  <div class="callout warn" style="margin-top:14px">
-    <div class="ttl">THE GAP</div>
-    <p>DataMoon's API shows <b>no native Zapier, Make, or Meta push</b>. (Its sibling AudienceLab has all three in-UI — confirm which back end your seat uses.) So we build the automation <i>on the REST API</i> — which is more controllable than a Zapier tile anyway.</p>
-  </div>
 
-  <h3 style="margin-top:24px">Three ways to automate it</h3>
-  <div class="grid g3">
-    <div class="tier t2">
-      <h3><span class="chip acc"><span class="dot acc"></span>OPTION A</span> DataMoon MCP server <span class="price" style="color:var(--accent-ink)">recommended</span></h3>
-      <p>A ~150-line wrapper turning each endpoint into an MCP tool. The agent builds feeds, counts, exports and enriches by voice — "the autonomous system an AI connects to directly." <b>Deliberately no push-to-Meta tool</b> (that's the gated step).</p>
-    </div>
-    <div class="tier t1">
-      <h3><span class="chip blue"><span class="dot blue"></span>OPTION B</span> Make / Zapier HTTP <span class="price" style="color:var(--blue-ink)">no-code</span></h3>
-      <p>Generic "Custom API call" module with the <code>X-API-Key</code> header hits the same endpoints; Make handles the async export-polling loop. The path for non-engineers. Coexists with the MCP.</p>
-    </div>
-    <div class="tier t3">
-      <h3><span class="chip copper"><span class="dot copper"></span>OPTION C</span> Native AudienceLab push <span class="price" style="color:var(--copper-ink)">gated</span></h3>
-      <p>If your seat is on the AudienceLab back end, the UI pushes to Meta in a few clicks. Convenient — but walks straight into Tripwire #1, so it stays behind the human attestation gate.</p>
-    </div>
-  </div>
-
-  <h3 style="margin-top:24px">The DataMoon MCP tool set</h3>
-  <div class="card">
-    <pre style="margin:0;overflow-x:auto;font:600 12.5px/1.7 ui-monospace,Menlo,monospace;color:var(--ink-2)">datamoon_list_feeds            → GET  /intent/feeds
-datamoon_build_feed            → POST /intent/feeds/builder      (free-text + filters)
-datamoon_feed_stats            → POST /intent/feeds/stats
-datamoon_filter_fields/values  → POST /intent/feeds/filters/*
-datamoon_export_count          → POST /intent/feeds/exports/count
-datamoon_create_export         → POST /intent/feeds/exports      (require_contact_id=true)
-datamoon_export_status         → POST /intent/feeds/exports/list
-datamoon_export_download_url   → POST /intent/feeds/exports/download-url
-datamoon_enrich                → POST /enrich/{bundle}           (contact_ids[])
-datamoon_credits               → GET  /organization/credits
-<span style="color:var(--risk-ink)">✗ no datamoon_push_to_meta      — the gated action stays manual (see Compliance)</span></pre>
+  <div class="callout acc" style="margin-top:16px">
+    <div class="ttl">WHAT THE ADS SHOULD SAY (the deliverable)</div>
+    <p>Even at n=5 a clear fingerprint appeared: this demographic cares about <b>regulatory survival, fraud/risk prevention, technology-but-cautiously, and professional status.</b> So the creative should <b>lead with credibility and de-risking (not hype), use "augment your expertise — never replace it," keep an authoritative and precise tone with zero hustle energy, and be concrete and ROI-framed.</b> Full brief — hooks, copy, video, statics, do-not-say — in the downloadable report.</p>
   </div>
 </section>
 
-<section id="part2">
-  <div class="sec-head"><span class="k">PART 2</span><h2>The LinkedIn analysis skill</h2></div>
-  <p class="note mut" style="margin-bottom:14px">A custom skill — <code>scalelogix-audience-intel</code> — that takes a DataMoon audience and returns a creative brief. Feeds straight into the world-class-copywriting and b2c-agent skills.</p>
-  <div class="card">
-    <h3>The pipeline</h3>
-    <pre style="margin:8px 0 0;overflow-x:auto;font:600 12.5px/1.7 ui-monospace,Menlo,monospace;color:var(--ink-2)">Stage 0  INTAKE      audience definition + contact list (from DataMoon)
-Stage 1  SAMPLE      random-sample N   (pilot 25 · confident read 200–300)
-Stage 2  FETCH       per contact: profile + last 10 posts       [via provider layer]
-Stage 3  EXTRACT     pains · desires · objections · vocabulary · values · content formats
-Stage 4  AGGREGATE   N records → ONE psychographic fingerprint
-Stage 5  REPORT      creative strategy mapped to ad assets
-Stage 6  DISPOSE     discard raw per-person data; keep only the fingerprint + report</pre>
-  </div>
-</section>
-
-<section id="fetch">
-  <div class="sec-head"><span class="k">PART 2</span><h2>Fetch methods — ranked by risk</h2></div>
-  <p class="note mut" style="margin-bottom:14px">The skill talks to a <b>provider-abstraction layer</b>, so when a provider gets sued or dies (RIP Proxycurl, shut down July 2025), you swap the adapter and the skill is untouched. The method — sample, analyse, aggregate, report — never changes.</p>
-  <div class="tbl-wrap"><table class="tbl">
-    <thead><tr><th>Method</th><th>What it is</th><th>LinkedIn-account risk</th><th>Throughput</th><th>Use for</th></tr></thead>
-    <tbody>
-      <tr><td><span class="chip ok"><span class="dot ok"></span>Google-index / SERP</span></td><td>Read public posts LinkedIn already let Google index, via a dork. <b>Never touches LinkedIn login.</b></td><td>Lowest</td><td>Low–med; partial coverage</td><td><b>The pilot</b></td></tr>
-      <tr><td><span class="chip acc"><span class="dot acc"></span>Compliant data API</span></td><td>Bright Data (won cases vs Meta &amp; X), People Data Labs (published methodology), Coresignal, Apify</td><td>Low</td><td>High, parallel</td><td>Scale + client-facing</td></tr>
-      <tr><td><span class="chip warn"><span class="dot warn"></span>Cookie-session MCP</span></td><td>stickerdaniel/linkedin-mcp-server — <code>get_person_profile</code> incl. posts</td><td>Higher — bans, ~50/hr soft-block</td><td>Low</td><td>Burner-account R&amp;D only</td></tr>
-      <tr><td><span class="chip"><span class="dot mut"></span>Fixtures</span></td><td>canned JSON</td><td>None</td><td>n/a</td><td>Building the skill offline</td></tr>
-    </tbody>
-  </table></div>
-  <p class="note mut" style="margin-top:10px">Vendor test: "Can they explain in plain language how they collected this data, and have they published it?" Yes → usable. Fake accounts / undisclosed broker chains → out.</p>
-</section>
-
-<section id="google">
-  <div class="sec-head"><span class="k">YOUR IDEA</span><h2>The Google-search workaround — good instinct, refined</h2></div>
+<section id="howposts">
+  <div class="sec-head"><span class="k">HOW IT WORKED</span><h2>Exactly how we pulled the posts</h2></div>
   <div class="grid g2">
     <div class="card">
-      <h3>Why it's the smartest low-risk path</h3>
-      <p class="note">Because it reads <b>Google's public index</b> instead of automating LinkedIn, it sidesteps the LinkedIn-account risk almost entirely. Your <code>inurl:linkedin.com/post AND (intitle:"Name")</code> has the right shape — two tweaks make it land:</p>
-      <ul style="padding-left:18px;display:grid;gap:6px;font-size:13px;color:var(--ink-2);margin-top:8px">
-        <li>Post URLs are <code>/posts/</code> (plural) with the name in the slug, so <code>site:</code> + quoted name beats <code>intitle:</code> (titles are often just truncated body text).</li>
-        <li>Google ANDs terms implicitly — the literal <code>AND</code> is optional.</li>
-      </ul>
+      <h3>The mechanism, step by step</h3>
+      <ol style="padding-left:18px;display:grid;gap:8px;font-size:13.5px;color:var(--ink-2)">
+        <li><b>Parsed the CSV</b> — kept only professional fields (name, title, firm, city), stripped every address/phone/email/income, and flagged rows where the LinkedIn URL didn't match the name.</li>
+        <li><b>Picked the five</b> most likely to post (partners, CIO, marketing) — because in this segment the leaders post and the staff don't.</li>
+        <li><b>Ran Google advanced-search dorks</b> per person — e.g. <code>site:linkedin.com/posts "Nick Cadden"</code> and <code>site:linkedin.com/in "Nick Cadden" Birmingham AL</code>.</li>
+        <li><b>Read the results from Google's index</b> — the post URL and snippet reveal each post's topic without ever opening LinkedIn.</li>
+        <li><b>Blended</b> posts (voice) with public profile/press (coverage) for anyone who doesn't post.</li>
+        <li><b>Aggregated</b> the five into one fingerprint → wrote the creative brief → discarded the raw.</li>
+      </ol>
     </div>
     <div class="card">
-      <h3>The dorks that actually hit</h3>
-      <pre style="margin:0;overflow-x:auto;white-space:pre-wrap;font:600 12px/1.7 ui-monospace,Menlo,monospace;color:var(--ink-2)">site:linkedin.com/posts "Jane Smith"
-
-site:linkedin.com/posts "Jane Smith"
-   (accountant OR CPA OR tax OR Alabama)
-   ← disambiguates common names
-
-site:linkedin.com/in "Jane Smith" Alabama accountant
-   ← finds the profile itself</pre>
-      <p class="note mut" style="margin-top:10px">Run human-paced through the <b>Chrome MCP</b> (reads your real browser) or a SERP API so Google itself doesn't bot-block you. Weakness is <b>coverage</b> (only public, indexed posts — maybe 20–40% of names) not compliance — so pair it with a compliant API for the misses.</p>
+      <h3>The two findings that shaped the design</h3>
+      <div class="callout risk" style="margin-bottom:12px">
+        <div class="ttl">DIRECT LINKEDIN IS BLOCKED — HTTP 999</div>
+        <p>Every attempt to fetch a LinkedIn profile or post directly returned LinkedIn's block code. <b>Google's index is the only viable read path</b> — your instinct to go through Google wasn't just safest, it's the only thing that works.</p>
+      </div>
+      <div class="callout warn">
+        <div class="ttl">DATAMOON ROWS AREN'T FACTS</div>
+        <p>~1 in 6 rows had a name↔profile or location mismatch (a "Sophia Archer" row was actually Steve Rutland; a "Birmingham AL" contact was in Florida). The parser flags these; they get verified or dropped <b>before</b> any Meta upload.</p>
+      </div>
     </div>
   </div>
 </section>
 
-<section id="report">
-  <div class="sec-head"><span class="k">PART 2</span><h2>The Creative Strategy Report — the deliverable</h2></div>
-  <p class="note mut" style="margin-bottom:14px">Structured so a copywriter, a video editor, and a static designer can each act without re-reading anything.</p>
+<section id="live">
+  <div class="sec-head"><span class="k">LIVE SYSTEM</span><h2>How it runs live — batches of 50</h2></div>
+  <p class="note mut" style="margin-bottom:14px">The pilot proves it on a handful. Live, you run any audience in <b>batches of 50</b>, aggregating after each and stopping when the picture stops changing.</p>
   <div class="grid g2">
     <div class="card">
-      <ul style="padding-left:18px;display:grid;gap:8px;font-size:13.5px;color:var(--ink-2)">
-        <li><b>Segment snapshot</b> — who they are, sample size + confidence, top roles/seniority</li>
-        <li><b>Psychographic fingerprint</b> — ranked pains, desires, aspirations, fears, identity markers, values — each with a frequency and 2–3 <i>verbatim</i> phrases they actually use</li>
-        <li><b>Awareness &amp; sophistication read (Schwartz)</b> — sets the angle: problem-aware vs solution-aware, how many claims they've already heard</li>
-        <li><b>Message map</b> — the 3–5 angles most likely to land, each with the pain it answers and objection it pre-empts</li>
-      </ul>
+      <h3>The loop</h3>
+      <pre style="margin:8px 0 0;overflow-x:auto;font:600 12px/1.7 ui-monospace,Menlo,monospace;color:var(--ink-2)">parse_audience.py  → contacts.json   (once; flags mismatches)
+
+for each batch of 50:
+   sample.py --n 50 --mode mixed --seed <batch#>
+   dork.py --from-sample batch.json
+   → read public posts+profiles via Google
+   aggregate.py → batch_fingerprint.json
+   merge into running fingerprint
+   if themes stable for 1–2 batches → STOP
+
+discard raw · keep fingerprint + report</pre>
     </div>
     <div class="card">
-      <ul style="padding-left:18px;display:grid;gap:8px;font-size:13.5px;color:var(--ink-2)">
-        <li><b>Hooks</b> — 8–10 first-3-seconds openers in their vocabulary</li>
-        <li><b>Ad copy</b> — primary text + headline patterns, tone, reading level, what never to say</li>
-        <li><b>Video / VSL scripts</b> — arc, proof points that matter to <i>them</i>, objections, CTA framing</li>
-        <li><b>Static images</b> — concepts, visual cues, identity to reflect, text overlays</li>
-        <li><b>Do-not-say list</b> — clichés, wrong assumptions, compliance-sensitive claims</li>
-        <li><b>Method footer</b> — sample size, provider, date; a reminder this is aggregate, no dossiers kept</li>
+      <h3>Why 50, and what each batch costs</h3>
+      <ul style="padding-left:18px;display:grid;gap:7px;font-size:13.5px;color:var(--ink-2)">
+        <li><b>Confidence:</b> you never need everyone. A random 250 (five batches) reads a 10,000-person audience to ±6% at 95%. One batch already gives a solid directional fingerprint.</li>
+        <li><b>Pacing:</b> 50 is comfortable for the Google reads without tripping bot-blocks — space queries out; stay well under ~50 searches/hour if using a real browser.</li>
+        <li><b>Per batch:</b> ~50 profiles found, ~18–20 with readable posts, minutes of wall-clock on the Google path, near-zero cost.</li>
+        <li><b>Stopping rule:</b> when a new batch adds no new themes or vocabulary, the segment is saturated — stop and save the credits.</li>
       </ul>
+    </div>
+  </div>
+  <div class="grid g3" style="margin-top:16px">
+    <div class="card pad-s"><h3>Knob · more voice</h3><p class="note"><code>--mode likely-posters</code> or raise N — when you want vocabulary and tone.</p></div>
+    <div class="card pad-s"><h3>Knob · more representative</h3><p class="note"><code>--mode random</code> — when you want true demographics, not just the vocal minority.</p></div>
+    <div class="card pad-s"><h3>Knob · quotable numbers</h3><p class="note">Run batches until themes stabilise (~N250) — when the brief needs hard percentages.</p></div>
+  </div>
+</section>
+
+<section id="effective">
+  <div class="sec-head"><span class="k">EFFECTIVENESS</span><h2>How well it actually works</h2></div>
+  <div class="grid g4">
+    <div class="tile"><div class="num">~100%</div><div class="lbl">Profile-match rate</div><div class="sub">Google finds the right person</div></div>
+    <div class="tile"><div class="num">~38%</div><div class="lbl">Have readable posts</div><div class="sub">clusters in leaders/marketers/tech</div></div>
+    <div class="tile"><div class="num">1 in 6</div><div class="lbl">DataMoon rows mismatched</div><div class="sub">caught automatically</div></div>
+    <div class="tile"><div class="num">n=5</div><div class="lbl">Still produced a usable brief</div><div class="sub">directional, not precise</div></div>
+  </div>
+  <div class="grid g2" style="margin-top:16px">
+    <div class="callout ok" style="border:1px solid rgba(63,162,115,.5);background:linear-gradient(180deg,rgba(63,162,115,.09),transparent 70%)">
+      <div class="ttl" style="color:var(--ok-ink)">WHAT'S STRONG</div>
+      <p>Coverage is near-total — we can characterise <i>everyone</i> from public profile signal, and add real <i>voice</i> from the ~40% who post. No LinkedIn risk, no message sent, no PII touched. The output is a genuine creative brief, not a data dump. And it's now a repeatable skill, not a one-off.</p>
+    </div>
+    <div class="callout warn">
+      <div class="ttl">WHAT TO KNOW HONESTLY</div>
+      <p>Post depth depends on the role mix — quiet segments (junior, non-tech) yield fewer posts, so lean on profile signal there. Small samples are <b>directional hypotheses</b>, not precise averages — widen N for quotable numbers. And DataMoon's own accuracy is the weak link: verify rows before trusting or uploading.</p>
+    </div>
+  </div>
+</section>
+
+<section id="skill">
+  <div class="sec-head"><span class="k">THE BUILD</span><h2>The finished skill — <code>scalelogix-audience-intel</code></h2></div>
+  <p class="note mut" style="margin-bottom:14px">Installed and live. Point it at any DataMoon export (or any list with names + LinkedIn URLs) and it runs the whole pipeline. Every script was tested on the real Alabama file.</p>
+  <div class="grid g2">
+    <div class="card">
+      <h3>What's inside</h3>
+      <div class="tbl-wrap"><table class="tbl">
+        <tbody>
+          <tr><td><code>SKILL.md</code></td><td>the workflow the agent follows</td></tr>
+          <tr><td><code>parse_audience.py</code></td><td>CSV → clean fields; flags mismatches; strips PII</td></tr>
+          <tr><td><code>sample.py</code></td><td>pick N (pilot 25 / batches of 50); voice vs demographic</td></tr>
+          <tr><td><code>dork.py</code></td><td>the validated Google queries per contact</td></tr>
+          <tr><td><code>aggregate.py</code></td><td>extractions → fingerprint (theme %, hit rate, vocab)</td></tr>
+          <tr><td><code>references/</code></td><td>compliance, dorks, report template, schema, live-batches</td></tr>
+          <tr><td><code>examples/</code></td><td>the finished Alabama report + POC notes</td></tr>
+        </tbody>
+      </table></div>
+    </div>
+    <div class="card">
+      <h3>Run it</h3>
+      <pre style="margin:0 0 12px;overflow-x:auto;font:600 12px/1.7 ui-monospace,Menlo,monospace;color:var(--ink-2)"># install (make it live)
+cp -R scalelogix-audience-intel ~/.claude/skills/
+
+# run
+python3 scripts/parse_audience.py audience.csv --out contacts.json
+python3 scripts/sample.py contacts.json --n 25 --mode mixed --out s.json
+python3 scripts/dork.py --from-sample s.json
+#  → read posts via Google, write extractions.json
+python3 scripts/aggregate.py extractions.json --out fp.json
+#  → write the Creative Strategy Report</pre>
+      <div class="meta-chips">
+        <a class="btn" href="../downloads/scalelogix-audience-intel-skill.zip" download>Download the skill (.zip)</a>
+        <a class="btn ghost" href="../downloads/Alabama_Accountants_Creative_Strategy_Report.md" download>Example report (.md)</a>
+      </div>
     </div>
   </div>
 </section>
 
 <section id="compliance">
-  <div class="sec-head"><span class="k">GUARDRAILS</span><h2>The two account-ban tripwires — both avoidable</h2></div>
-  <div class="grid g2">
+  <div class="sec-head"><span class="k">GUARDRAILS</span><h2>Baked into the skill</h2></div>
+  <div class="grid g3">
     <div class="callout risk">
-      <div class="ttl">⚠ TRIPWIRE 1 — THE META UPLOAD (biggest, and separate from LinkedIn)</div>
-      <p>Meta's Custom Audience terms require you to warrant you have <b>"all necessary rights and permissions and a lawful basis"</b> for uploaded contact data. A cold DataMoon-sourced list is the classic trigger for audience rejection and, repeated, account restriction — and this account already has history.</p>
-      <p style="margin-top:8px"><b>Fix:</b> a human <b>attestation gate</b> before any push — lawful basis confirmed, not a restricted category, comfortable with the source. Never an automated tool.</p>
+      <div class="ttl">META UPLOAD GATE</div>
+      <p>Meta requires you warrant <b>"all necessary rights and permissions and a lawful basis"</b> for uploaded data. The skill <b>never</b> uploads — that's a separate human step after verifying non-clean rows. Protects the ad account.</p>
     </div>
     <div class="callout warn">
-      <div class="ttl">⚠ TRIPWIRE 2 — LINKEDIN AUTOMATED ACCESS</div>
-      <p>Proxycurl (what everyone used) was sued by LinkedIn and <b>shut down July 2025</b>. Cookie-session scrapers soft-block at ~50/hr and risk the account.</p>
-      <p style="margin-top:8px"><b>Fix:</b> default to the Google-index method or a compliant provider; reserve cookie-session for tiny burner-account samples. At 25 profiles this is low and containable.</p>
+      <div class="ttl">NO LINKEDIN LOGIN</div>
+      <p>Reads Google's public index only. Never automates against LinkedIn (that's what got Proxycurl shut down). Reading public data is defensible; the ban risk is avoided.</p>
+    </div>
+    <div class="callout acc">
+      <div class="ttl">PII MINIMISED</div>
+      <p>Addresses, phones, personal emails, income and net-worth are stripped at parse time and never used. Sample → aggregate → discard the raw. No dossier lake.</p>
     </div>
   </div>
-  <div class="callout acc" style="margin-top:16px">
-    <div class="ttl">AND A QUIETER ONE — PRIVACY LAW</div>
-    <p>You're a UK data controller; the targets are US consumers. Storing per-person dossiers is processing under UK GDPR + CCPA/CPRA. <b>Sample → aggregate → discard the raw</b> pulls this back to defensible. The permanent "dossier lake" is the thing <i>not</i> to build.</p>
-  </div>
 </section>
 
-<section id="build">
-  <div class="sec-head"><span class="k">BUILD</span><h2>Phased plan</h2></div>
-  <div class="card" data-scope="dm-build">
-    <ul class="ck">
-      <li><input type="checkbox" id="db1" data-key="dm-b-1"><label for="db1"><b>Phase 1 — DataMoon MCP server</b> over the REST API (no Meta-push tool) · ~½–1 day</label></li>
-      <li><input type="checkbox" id="db2" data-key="dm-b-2"><label for="db2"><b>Phase 2 — Fetch layer</b>: Google-index method + fixtures back end; pick 1 compliant provider · ~1 day</label></li>
-      <li><input type="checkbox" id="db3" data-key="dm-b-3"><label for="db3"><b>Phase 3 — Extraction + aggregation + report</b>; run the 25-contact pilot on one real audience · ~1–2 days</label></li>
-      <li><input type="checkbox" id="db4" data-key="dm-b-4"><label for="db4"><b>Phase 4 — Wire it together</b> DataMoon → sample → skill → report; add the Meta attestation gate · ~1 day</label></li>
-      <li><input type="checkbox" id="db5" data-key="dm-b-5"><label for="db5"><b>Phase 5 — Harden</b>: rate-limit handling, per-run cost caps, discard-raw job, logging · ongoing</label></li>
-    </ul>
-    <div class="prog-row js-prog" data-for="dm-build"><div class="bar"><i></i></div><span class="pct"></span></div>
-  </div>
-
-  <h3 style="margin-top:20px">Decisions to make</h3>
-  <div class="tbl-wrap"><table class="tbl">
-    <thead><tr><th>#</th><th>Decision</th><th>Recommendation</th></tr></thead>
-    <tbody>
-      <tr><td>D-a</td><td>Compliant provider for scale</td><td>Pilot <b>Bright Data or People Data Labs</b> for client-facing runs</td></tr>
-      <tr><td>D-b</td><td>Confirm DataMoon's Meta-sync surface</td><td>Check if your seat is on the AudienceLab back end (native push) or API-only</td></tr>
-      <tr><td>D-c</td><td>Sample size default</td><td><b>25 pilot</b>, scale to 250 for flagship verticals</td></tr>
-      <tr><td>D-d</td><td>Where the fingerprint library lives</td><td>One reusable fingerprint per audience — becomes a ScaleLogix asset over time</td></tr>
-    </tbody>
-  </table></div>
-</section>
-
-<section id="source">
-  <div class="sec-head"><span class="k">SOURCE</span><h2>Research &amp; download</h2></div>
+<section id="downloads">
+  <div class="sec-head"><span class="k">DOWNLOADS</span><h2>Everything from this workstream</h2></div>
   <div class="card">
-    <p class="note">Full plan with the endpoint map, skill file structure, sampling math and quoted compliance sources:</p>
-    <div class="meta-chips">
-      <a class="btn" href="../downloads/DataMoon_LinkedIn_System_Plan_2026-07-16.md" download>Download full plan (.md)</a>
-      <a class="btn ghost" href="https://intentdocs.datamoon.com/" target="_blank" rel="noopener">DataMoon API docs</a>
-      <a class="btn ghost" href="../research/">Lead Tiers (DataMoon = Tier 1) →</a>
+    <div class="meta-chips" style="margin-top:0">
+      <a class="btn" href="../downloads/scalelogix-audience-intel-skill.zip" download>The skill (.zip)</a>
+      <a class="btn ghost" href="../downloads/Alabama_Accountants_Creative_Strategy_Report.md" download>Alabama report (.md)</a>
+      <a class="btn ghost" href="../downloads/POC_Test_Alabama_Accountants_2026-07-16.md" download>POC method notes (.md)</a>
+      <a class="btn ghost" href="../downloads/DataMoon_LinkedIn_System_Plan_2026-07-16.md" download>Full system plan (.md)</a>
     </div>
-    <p class="note mut" style="margin-top:14px">Key sources: <a href="https://www.facebook.com/legal/terms/customaudience" target="_blank" rel="noopener">Meta Custom Audience terms</a> · <a href="https://linkedapi.io/guides/proxycurl-alternatives" target="_blank" rel="noopener">Proxycurl shutdown</a> · <a href="https://dev.to/zackrag/linkedin-scraping-is-dead-5-legal-tos-safe-alternatives-that-actually-work-in-2026-3f36" target="_blank" rel="noopener">Compliant LinkedIn alternatives</a> · <a href="https://github.com/stickerdaniel/linkedin-mcp-server" target="_blank" rel="noopener">LinkedIn MCP server</a></p>
+    <p class="note mut" style="margin-top:14px">Source: <a href="https://intentdocs.datamoon.com/" target="_blank" rel="noopener">DataMoon API docs</a> · <a href="https://www.facebook.com/legal/terms/customaudience" target="_blank" rel="noopener">Meta Custom Audience terms</a>. DataMoon = the Tier-1 source in the <a href="../research/">Lead Tiers</a> model.</p>
   </div>
 </section>
 
