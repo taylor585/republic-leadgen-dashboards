@@ -42,7 +42,7 @@
 
 <nav class="subnav" aria-label="Sections">
   <div class="subnav-in">
-    <a href="#process">Fit with LeadHunter</a><a href="#test">The test run</a><a href="#howposts">How we pulled the posts</a><a href="#live">Live system · batches of 50</a><a href="#effective">Effectiveness</a><a href="#skill">The skill</a><a href="#compliance">Compliance</a><a href="#downloads">Downloads</a>
+    <a href="#process">Fit with LeadHunter</a><a href="#test">The test run</a><a href="#howposts">How we pulled the posts</a><a href="#live">Live system · batches of 50</a><a href="#effective">Effectiveness</a><a href="#skill">The skill</a><a href="#codex">For Codex</a><a href="#compliance">Compliance</a><a href="#downloads">Downloads</a>
   </div>
 </nav>
 
@@ -180,7 +180,7 @@ discard raw · keep fingerprint + report</pre>
 </section>
 
 <section id="skill">
-  <div class="sec-head"><span class="k">THE BUILD</span><h2>The finished skill — <code>scalelogix-audience-intel</code></h2></div>
+  <div class="sec-head"><span class="k">THE BUILD</span><h2>The finished skill — <code>scalelogix-datamoon</code></h2></div>
   <p class="note mut" style="margin-bottom:14px">Installed and live. Point it at any DataMoon export (or any list with names + LinkedIn URLs) and it runs the whole pipeline. Every script was tested on the real Alabama file.</p>
   <div class="grid g2">
     <div class="card">
@@ -200,7 +200,7 @@ discard raw · keep fingerprint + report</pre>
     <div class="card">
       <h3>Run it</h3>
       <pre style="margin:0 0 12px;overflow-x:auto;font:600 12px/1.7 ui-monospace,Menlo,monospace;color:var(--ink-2)"># install (make it live)
-cp -R scalelogix-audience-intel ~/.claude/skills/
+cp -R scalelogix-datamoon ~/.claude/skills/
 
 # run
 python3 scripts/parse_audience.py audience.csv --out contacts.json
@@ -210,10 +210,44 @@ python3 scripts/dork.py --from-sample s.json
 python3 scripts/aggregate.py extractions.json --out fp.json
 #  → write the Creative Strategy Report</pre>
       <div class="meta-chips">
-        <a class="btn" href="../downloads/scalelogix-audience-intel-skill.zip" download>Download the skill (.zip)</a>
+        <a class="btn" href="../downloads/scalelogix-datamoon-skill.zip" download>Download DataMoon skill (.zip)</a>
         <a class="btn ghost" href="../downloads/Alabama_Accountants_Creative_Strategy_Report.md" download>Example report (.md)</a>
       </div>
     </div>
+  </div>
+</section>
+
+<section id="codex">
+  <div class="sec-head"><span class="k">HANDOFF</span><h2>For Codex — everything in one place</h2></div>
+  <p class="note mut" style="margin-bottom:14px">This whole page is <b>public GitHub Pages (no login)</b>, so Codex can fetch the link and every file below directly. The DataMoon skill is now a self-contained package with a proper <code>SKILL.md</code> (YAML), the runnable scripts, the real test data, and the end-to-end LeadHunter explanation.</p>
+  <div class="grid g2">
+    <div class="card">
+      <h3>The three things you asked for</h3>
+      <ul class="ck" data-scope="codex" style="margin-top:6px">
+        <li><input type="checkbox" id="cx1" data-key="cx-1" checked><label for="cx1"><b>Dashboard link</b> — this page, public, Codex-accessible: <code>/republic-leadgen-dashboards/datamoon/</code></label></li>
+        <li><input type="checkbox" id="cx2" data-key="cx-2" checked><label for="cx2"><b>Latest test results</b> — the full 36-contact run is live in the sections above (coverage, hit-rate, theme ranking)</label></li>
+        <li><input type="checkbox" id="cx3" data-key="cx-3" checked><label for="cx3"><b>End-to-end doc</b> — exactly how it works with LeadHunter, same Google advanced-command process (download below)</label></li>
+        <li><input type="checkbox" id="cx4" data-key="cx-4" checked><label for="cx4"><b>DataMoon skill</b> — SKILL.md + YAML, zipped, with scripts + test files (download below)</label></li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3>What's in the skill zip</h3>
+      <pre style="margin:0;overflow-x:auto;font:600 12px/1.7 ui-monospace,Menlo,monospace;color:var(--ink-2)">scalelogix-datamoon/
+  SKILL.md                    # YAML frontmatter + workflow
+  LINKS.md                    # dashboard + all URLs
+  references/
+    DataMoon_LeadHunter_EndToEnd.md   ← read first
+    dorks.md · compliance.md
+    live-batches.md · report-template.md
+    extraction-schema.json
+  scripts/  parse_audience · sample · dork · aggregate
+  test-data/  contacts · sample · extractions · fingerprint  (PII-free)
+  examples/  Alabama report · POC notes · system plan</pre>
+    </div>
+  </div>
+  <div class="meta-chips" style="margin-top:16px">
+    <a class="btn" href="../downloads/scalelogix-datamoon-skill.zip" download>Download DataMoon skill (.zip)</a>
+    <a class="btn ghost" href="../downloads/DataMoon_LeadHunter_EndToEnd.md" download>End-to-end + LeadHunter doc (.md)</a>
   </div>
 </section>
 
@@ -239,10 +273,12 @@ python3 scripts/aggregate.py extractions.json --out fp.json
   <div class="sec-head"><span class="k">DOWNLOADS</span><h2>Everything from this workstream</h2></div>
   <div class="card">
     <div class="meta-chips" style="margin-top:0">
-      <a class="btn" href="../downloads/scalelogix-audience-intel-skill.zip" download>The skill (.zip)</a>
+      <a class="btn" href="../downloads/scalelogix-datamoon-skill.zip" download>DataMoon skill (.zip)</a>
+      <a class="btn ghost" href="../downloads/DataMoon_LeadHunter_EndToEnd.md" download>End-to-end + LeadHunter (.md)</a>
       <a class="btn ghost" href="../downloads/Alabama_Accountants_Creative_Strategy_Report.md" download>Alabama report (.md)</a>
       <a class="btn ghost" href="../downloads/POC_Test_Alabama_Accountants_2026-07-16.md" download>POC method notes (.md)</a>
       <a class="btn ghost" href="../downloads/DataMoon_LinkedIn_System_Plan_2026-07-16.md" download>Full system plan (.md)</a>
+      <a class="btn ghost" href="../downloads/scalelogix-audience-intel-skill.zip" download>Generic engine skill (.zip)</a>
     </div>
     <p class="note mut" style="margin-top:14px">Source: <a href="https://intentdocs.datamoon.com/" target="_blank" rel="noopener">DataMoon API docs</a> · <a href="https://www.facebook.com/legal/terms/customaudience" target="_blank" rel="noopener">Meta Custom Audience terms</a>. DataMoon = the Tier-1 source in the <a href="../research/">Lead Tiers</a> model.</p>
   </div>
